@@ -15,12 +15,12 @@ while ($true) {
             Write-Host "检测到Qsign API已离线，正在重启程序..."
             
             # 启动项目(这里替换成你自己的启动脚本或快捷方式路径)
-            Start D:\ShiaWorkShop\sealdice-505657857-2023-07-02\data\default\extra\go-cqhttp-qq3588206208\qsign.lnk
+            Start "启动qsign.bat"
             
             Write-Host "Qsign服务端已启动."
         }
     }
     
     # 等待一段时间后继续监测
-    Start-Sleep -Seconds 5
+    Start-Sleep -Seconds 30
 }
