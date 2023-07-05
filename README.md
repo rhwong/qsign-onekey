@@ -2,6 +2,8 @@
 
 ## 一键运行qsign
 
+本项目使用1.1.0版本，后续版本由于当前go-cqhttp(1.1.0)暂未适配，所以暂不升级。如需新版请移步dev分支(暂未实现)。
+
 用于一键在Windows下部署[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)
 
 请将该脚本和 `go-cqhttp` 放在同一级目录，这时脚本会自动读取 `device.json` 文件中的 `ANDROID_ID`
