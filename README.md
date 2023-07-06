@@ -2,7 +2,8 @@
 
 ## 一键运行qsign
 
-本项目使用1.1.0版本，后续版本由于当前go-cqhttp(1.1.0)暂未适配，所以暂不升级。如需新版请移步dev分支(暂未实现)。
+用于一键在Windows下部署[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)
+本项目使用1.1.0版本，后续版本由于当前go-cqhttp(1.1.0)暂未适配，所以暂不升级。如需新版请移步[dev](https://github.com/rhwong/unidbg-fetch-qsign-onekey/tree/dev)分支。
 
 用于一键在Windows下部署[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)
 
