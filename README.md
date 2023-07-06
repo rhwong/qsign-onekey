@@ -6,15 +6,13 @@
 
 用于一键在Windows下部署[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)
 
-请将该脚本和 `go-cqhttp` 放在同一级目录，这时脚本会自动读取 `device.json` 文件中的 `ANDROID_ID`
+请将该脚本和 `go-cqhttp` 放在同一级目录，这时脚本会自动读取 `config.yml` 文件中的部分参数
 
-正确启动后，在需要填写签名服务器的地方填写如下地址
+如果你需要自定义端口和IP以及协议版本，那么你可以编辑 `Start_Qsign.bat` 文件里最上方的变量部分。
 
-```
-http://127.0.0.1:13579
-```
+### 新特性
 
-如果你需要自定义端口和IP，或者你不与 `go-cqhttp` 放在同一个目录下，想要手动修改 `ANDROID_ID`，那么你可以编辑 `Start_Qsign.bat` 文件里最上方的变量部分
+2023-07-07 现在，当与 `config.yml` 同级时，`Start_Qsign.bat` 会自动修改 `config.yml` 中的 `sign-server` 和 `key` 的值，实现了全面懒猪猪启动！
 
 ## Qsign_Monitor
 
