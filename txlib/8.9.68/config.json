@@ -1,18 +1,1 @@
-{
-  "server": {
-    "host": "0.0.0.0",
-    "port": 13579
-  },
-  "key": "1145141919810",
-  "reload_interval": 40,
-  "protocol": {
-    "qua": "V1_AND_SQ_8.9.68_4218_HDBM_T",
-    "version": "8.9.68",
-    "code": "4218"
-  },
-  "unidbg": {
-    "dynarmic": false,
-    "unicorn": true,
-    "debug": false
-  }
-}
+{ "server": { "host": "0.0.0.0", "port": 13579 }, "key": "1145141919810", "reload_interval": 40, "protocol": { "qua": "V1_AND_SQ_8.9.68_4218_HDBM_T", "version": "8.9.68", "code": "4218" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } 

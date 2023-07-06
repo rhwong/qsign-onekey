@@ -96,4 +96,4 @@ Remove-Item -Path .\.git -Recurse -ErrorAction SilentlyContinue
 & $GIT remote add origin http://ghproxy.com/https://github.com/rhwong/unidbg-fetch-qsign-onekey
 & $GIT fetch --depth=1
 & $GIT checkout main
-Write-Host "安装成功!" -ForegroundColor green
+Write-Host "安装成功!!" -ForegroundColor green

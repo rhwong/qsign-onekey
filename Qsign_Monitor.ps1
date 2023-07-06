@@ -15,7 +15,7 @@ while ($true) {
             Write-Host "检测到Qsign API已离线，正在重启程序..."
             
             # 启动项目(这里替换成你自己的启动脚本或快捷方式路径)
-            Start "启动qsign.bat"
+            Start "Start_Qsign.bat"
             
             Write-Host "Qsign服务端已启动！"
         }
