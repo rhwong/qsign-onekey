@@ -19,7 +19,7 @@ if "%txlib_version%"=="8.9.68" (
 
 if "%txlib_version%" neq "8.9.63" (
   if "%txlib_version%" neq "8.9.68" (
-    echo è­¦å‘Š: é”™è¯¯çš„ txlib_versionï¼è¯·è¾“å…¥æ­£ç¡®çš„åè®®ç‰ˆæœ¬å·ï¼
+    echo ¾¯¸æ: ´íÎóµÄ txlib_version£¡ÇëÊäÈëÕıÈ·µÄĞ­Òé°æ±¾ºÅ£¡
     timeout 10
     exit /b
   )
@@ -29,7 +29,7 @@ if exist "%config_file%" (
   lib\sed.exe -i "/# sign-server:/d" "%config_file%"
   lib\sed.exe -i "s/sign-server:.*/sign-server: http:\/\/%host%:%port%/g; s/key:.*/key: %key%/g" "%config_file%"
 ) else (
-  echo å½“å‰ä¸go-cqhttpåˆ†ç¦»è¿è¡Œï¼Œè¯·è‡ªè¡Œä¿®æ”¹ç­¾åæœåŠ¡å™¨åœ°å€åŠKEY.
+  echo µ±Ç°Óëgo-cqhttp·ÖÀëÔËĞĞ£¬Çë×ÔĞĞĞŞ¸ÄÇ©Ãû·şÎñÆ÷µØÖ·¼°KEY .
 )
 
 
