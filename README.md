@@ -2,7 +2,7 @@
 
 ## 一键运行qsign
 
-本项目使用1.1.0版本，后续版本由于当前go-cqhttp(1.1.0)暂未适配，所以暂不升级。如需新版请移步dev分支(暂未实现)。
+本分支为开发分支，使用1.1.3版本，由于当前go-cqhttp(1.1.0)暂未适配，所以暂不升级。如需旧版请移步主分支。
 
 用于一键在Windows下部署[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)
 
@@ -24,3 +24,4 @@ http://127.0.0.1:13579
 ## 使用方法
 
 推荐您直接右键点击 `Qsign_Monitor.ps1` ，选择 `使用PowerShell运行`，这样在开启监控的同时会启动qsign服务端
+
