@@ -29,7 +29,7 @@ if exist "%config_file%" (
   lib\sed.exe -i "/# sign-server:/d" "%config_file%"
   lib\sed.exe -i "s/sign-server:.*/sign-server: http:\/\/%host%:%port%/g; s/key:.*/key: %key%/g" "%config_file%"
 ) else (
-  echo 当前与go-cqhttp分离运行，请自行修改签名服务器地址及KEY .
+  echo 当前与go-cqhttp分离运行，请自行修改签名服务器地址及KEY.
 )
 
 
