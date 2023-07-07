@@ -1,10 +1,23 @@
+<div align="center">
+    <img alt="OOOK" src="https://olivos.onekey.ren/img/logo.png"/>
+
 # unidbg-fetch-qsign-onekey
 
-## 一键运行qsign
+用于一键在Windows下部署[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)<br>
 
-本分支为开发分支，使用1.1.3版本，由于当前go-cqhttp(1.1.0)暂未适配，所以暂不升级。如需旧版请移步主分支。
+<img src="https://img.shields.io/github/issues/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/github/forks/rhwong/unidbg-fetch-qsign-onekey"> 
+<img src="https://img.shields.io/github/stars/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/github/license/rhwong/unidbg-fetch-qsign-onekey">
 
-用于一键在Windows下部署[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)
+注意：本分支为开发分支，使用1.1.3版本，由于当前go-cqhttp(1.1.0)暂未适配，所以暂不升级。如需旧版请移步主分支。
+
+注意：本脚本仅适用于Windows x64
+
+<img src="https://img.shields.io/badge/Windows-x86__64-red?style=flat-square&logo=Windows"> 
+
+</div>
+<!-- projectInfo end -->
+
+## 安装说明
 
 请将该脚本和 `go-cqhttp` 放在同一级目录，这时脚本会自动读取 `config.yml` 文件中的部分参数。
 
