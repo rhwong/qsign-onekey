@@ -1,4 +1,5 @@
 @echo off
+
 set JAVA_HOME=.\jre
 set "ver=1.1.3"
 set "library=txlib/"
@@ -19,7 +20,7 @@ if "%txlib_version%"=="8.9.68" (
 
 if "%txlib_version%" neq "8.9.63" (
   if "%txlib_version%" neq "8.9.68" (
-    echo ¾¯¸æ: ´íÎóµÄ txlib_version£¡ÇëÊäÈëÕıÈ·µÄĞ­Òé°æ±¾ºÅ£¡
+    echo è­¦å‘Š: é”™è¯¯çš„ txlib_versionï¼è¯·è¾“å…¥æ­£ç¡®çš„åè®®ç‰ˆæœ¬å·ï¼
     timeout 10
     exit /b
   )
@@ -29,7 +30,7 @@ if exist "%config_file%" (
   lib\sed.exe -i "/# sign-server:/d" "%config_file%"
   lib\sed.exe -i "s/sign-server:.*/sign-server: http:\/\/%host%:%port%/g; s/key:.*/key: %key%/g" "%config_file%"
 ) else (
-  echo µ±Ç°Óëgo-cqhttp·ÖÀëÔËĞĞ£¬Çë×ÔĞĞĞŞ¸ÄÇ©Ãû·şÎñÆ÷µØÖ·¼°KEY.
+  echo å½“å‰ä¸go-cqhttpåˆ†ç¦»è¿è¡Œï¼Œè¯·è‡ªè¡Œä¿®æ”¹ç­¾åæœåŠ¡å™¨åœ°å€åŠKEY .
 )
 
 
