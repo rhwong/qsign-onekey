@@ -10,11 +10,11 @@ set "json_file=%library%%txlib_version%/config.json"
 set "config_file=config.yml"
 
 if "%txlib_version%"=="8.9.63" (
-    echo { "server": { "host": "%host%", "port": %port% }, "key": "%key%", "reload_interval": 40, "protocol": { "qua": "V1_AND_SQ_8.9.63_4194_YYB_D", "version": "8.9.63", "code": "4194" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "%json_file%"
+    echo { "server": { "host": "%host%", "port": %port% }, "key": "%key%", "auto_register": false, "reload_interval": 40, "protocol": { "qua": "V1_AND_SQ_8.9.63_4194_YYB_D", "version": "8.9.63", "code": "4194" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "%json_file%"
 )
 
 if "%txlib_version%"=="8.9.68" (
-    echo { "server": { "host": "%host%", "port": %port% }, "key": "%key%", "reload_interval": 40, "protocol": { "qua": "V1_AND_SQ_8.9.68_4218_HDBM_T", "version": "8.9.68", "code": "4218" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "%json_file%"
+    echo { "server": { "host": "%host%", "port": %port% }, "key": "%key%", "auto_register": false, "reload_interval": 40, "protocol": { "qua": "V1_AND_SQ_8.9.68_4218_HDBM_T", "version": "8.9.68", "code": "4218" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "%json_file%"
 )
 
 if "%txlib_version%" neq "8.9.63" (
@@ -29,7 +29,7 @@ if exist "%config_file%" (
   lib\sed.exe -i "/# sign-server:/d" "%config_file%"
   lib\sed.exe -i "s/sign-server:.*/sign-server: http:\/\/%host%:%port%/g; s/key:.*/key: %key%/g" "%config_file%"
 ) else (
-  echo 当前与go-cqhttp分离运行，请自行修改签名服务器地址及KEY.
+  echo 当前与go-cqhttp分离运行，请自行修改签名服务器地址及KEY .
 )
 
 

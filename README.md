@@ -14,6 +14,8 @@
 
 2023-07-07 现在，当与 `config.yml` 同级时，`Start_Qsign.bat` 会自动修改 `config.yml` 中的 `sign-server` 和 `key` 的值，实现了全面懒猪猪启动！
 
+2023-07-18 更新至1.1.5，新特性请查看原仓库
+
 ## Qsign_Monitor
 
 这个powershell脚本用于检测签名服务器是否正常工作，如果检测不到13579端口上有服务，那么就会重新运行 `Start_Qsign.bat`
