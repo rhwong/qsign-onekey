@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 set JAVA_HOME=.\jre
-set "ver=1.1.3"
+set "ver=1.1.5"
 set "library=txlib/"
 set "txlib_version=8.9.63"
 set "json_file=%library%%txlib_version%/config.json"
@@ -11,6 +11,7 @@ set "password="
 
 if not exist "%json_file%" (
   echo ---------------------------------------------------------------
+  echo unidbg-fetch-qsign-onekey Ver.%ver%
   echo Default txlib_ Version is %txlib_version%
   echo If you want to change it, please write it to this bat file.
   echo txlib_version_config_file does not exist.
@@ -49,6 +50,7 @@ if "%txlib_version%"=="8.9.68" (
     )
 ) else (
   echo ---------------------------------------------------------------
+  echo unidbg-fetch-qsign-onekey Ver.%ver%
   echo txlib_version_config_file exists. 
   echo If you want to rewrite the config.json , please delete it!
   echo ---------------------------------------------------------------
