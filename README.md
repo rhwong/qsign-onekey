@@ -3,12 +3,14 @@
 
 # unidbg-fetch-qsign-onekey
 
+本分支为开发分支，使用1.1.3版本，由于当前go-cqhttp(1.1.0)暂未适配，所以暂不升级。如需旧版请移步主分支。
+
 用于一键在Windows下部署[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)<br>
 
 <img src="https://img.shields.io/github/issues/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/github/forks/rhwong/unidbg-fetch-qsign-onekey"> 
 <img src="https://img.shields.io/github/stars/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/github/license/rhwong/unidbg-fetch-qsign-onekey">
 
-注意：本分支为开发分支，使用1.1.3版本，由于当前go-cqhttp(1.1.0)暂未适配，所以暂不升级。如需旧版请移步主分支。
+注意：本分支为开发分支，使用1.1.5版本，由于当前go-cqhttp(1.1.0)暂未适配，所以暂不升级。如需旧版请移步主分支。
 
 注意：本脚本仅适用于Windows x64
 
