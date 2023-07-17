@@ -1,26 +1,58 @@
+<div align="center">
+    <img alt="OOOK" src="https://olivos.onekey.ren/img/logo.png"/>
+
 # unidbg-fetch-qsign-onekey
 
-## 一键运行qsign
+本项目使用1.1.5版本，由于当前go-cqhttp(1.1.0)暂未适配，所以请自行编译dev分支，或使用其他对接方式。如需旧版请移步release
 
-用于一键在Windows下部署[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)
 
-本项目使用1.1.0版本，后续版本由于当前go-cqhttp(1.1.0)暂未适配，所以暂不升级。如需新版请移步[dev](https://github.com/rhwong/unidbg-fetch-qsign-onekey/tree/dev)分支。
+用于一键在Windows下部署[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)<br>
 
-请将该脚本和 `go-cqhttp` 放在同一级目录，这时脚本会自动读取 `device.json` 文件中的 `ANDROID_ID`
+<img src="https://img.shields.io/github/issues/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/github/forks/rhwong/unidbg-fetch-qsign-onekey"> 
+<img src="https://img.shields.io/github/stars/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/github/license/rhwong/unidbg-fetch-qsign-onekey">
 
-正确启动后，在需要填写签名服务器的地方填写如下地址
+注意：本脚本仅适用于Windows x64
 
-```
-http://127.0.0.1:13579
-```
+<img src="https://img.shields.io/badge/Windows-x86__64-red?style=flat-square&logo=Windows"> 
 
-如果你需要自定义端口和IP，或者你不与 `go-cqhttp` 放在同一个目录下，想要手动修改 `ANDROID_ID`，那么你可以编辑 `启动qsign.bat` 文件里最上方的变量部分
+</div>
+<!-- projectInfo end -->
 
-## Qsign_Monitor
+## 安装说明
 
-这个powershell脚本用于检测签名服务器是否正常工作，如果检测不到13579端口上有服务，那么就会重新运行 `启动qsign.bat`
-所以如果你自定义了端口，那么需要在这个脚本里也作相应的修改
+请将该脚本和 `go-cqhttp` 放在同一级目录，这时脚本会自动读取 `config.yml` 文件中的部分参数。
+
+如果你需要自定义协议版本，那么你可以编辑 `Start_Qsign.bat` 文件里最上方的变量部分。
 
 ## 使用方法
 
-推荐您直接右键点击 `Qsign_Monitor.ps1` ，选择 `使用PowerShell运行`，这样在开启监控的同时会启动qsign服务端
+推荐您直接右键点击 `Qsign_Monitor.ps1` ，选择 `使用PowerShell运行`，这样在开启监控的同时会启动qsign服务端。
+
+你也可以直接双击 `Start_Qsign.bat` 启动qsign。
+
+如果 `Qsign_Monitor.ps1` 已经是开启状态，请不要重复运行。
+
+
+## 关于Qsign_Monitor
+
+这个powershell脚本用于检测签名服务器是否正常工作，如果检测不到13579端口上有服务，那么就会重新运行 `Start_Qsign.bat`
+所以如果你自定义了端口，那么需要在这个脚本里也作相应的修改
+
+
+### 新特性
+
+#### 2023-07-07 
+
+现在，当与 `config.yml` 同级时，`Start_Qsign.bat` 会自动修改 `config.yml` 中的 `sign-server` 和 `key` 的值，实现了全面懒猪猪启动！
+
+并且，第一次运行时，会提示你设定`host`、`port`、`key`的值，如果你不想输入，或者不知道怎么输入，请直接按下enter键。
+
+程序默认运行在`8.9.63`版本，如果后续`go-cqhttp`的正式版本中自带的协议有更新，那么本仓库也会同步更新脚本，建议点亮star及时关注哦！
+
+#### 2023-07-18 
+
+更新至1.1.5，新特性请查看原仓库
+
+
+
+
