@@ -34,13 +34,13 @@ if not exist "%json_file%" (
       if "!key!"=="" (
       set "key=1145141919810"
       )
-if "%txlib_version%"=="8.9.63" (
-    echo { "server": { "host": "%host%", "port": %port% }, "key": "%key%", "auto_register": false, "reload_interval": 40, "protocol": { "qua": "V1_AND_SQ_8.9.63_4194_YYB_D", "version": "8.9.63", "code": "4194" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "%json_file%"
+  if "%txlib_version%"=="8.9.63" (
+    echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": false, "reload_interval": 40, "protocol": { "qua": "V1_AND_SQ_8.9.63_4194_YYB_D", "version": "8.9.63", "code": "4194" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "%json_file%"
 )
 
 if "%txlib_version%"=="8.9.68" (
-    echo { "server": { "host": "%host%", "port": %port% }, "key": "%key%", "auto_register": false, "reload_interval": 40, "protocol": { "qua": "V1_AND_SQ_8.9.68_4218_HDBM_T", "version": "8.9.68", "code": "4218" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "%json_file%"
-)
+    echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": false, "reload_interval": 40, "protocol": { "qua": "V1_AND_SQ_8.9.68_4218_HDBM_T", "version": "8.9.68", "code": "4218" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "%json_file%"
+    )
   if "%txlib_version%" neq "8.9.63" (
       if "%txlib_version%" neq "8.9.68" (
         echo Warning: Wrong txlib_ Version. Please enter the correct protocol version number!
@@ -62,7 +62,7 @@ if "%txlib_version%"=="8.9.68" (
 
 if exist "%config_file%" (
   lib\sed.exe -i "/# sign-server:/d" "%config_file%"
-  lib\sed.exe -i "s/sign-server:.*/sign-server: http:\/\/!host!:!port!/g; s/key:.*/key: !key!/g" "%config_file%"
+  lib\sed.exe -i "s/sign-server:.*/sign-server: 'http:\/\/!host!:!port!'/g; s/key:.*/key: '!key!'/g" "%config_file%"
 ) else (
   echo Run separately from go-cqhttp. Please enter the sign-server address and KEY in go-cqhttp config.
 )
