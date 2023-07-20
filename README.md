@@ -3,7 +3,7 @@
 
 # unidbg-fetch-qsign-onekey
 
-本项目使用1.1.6版本，由于当前go-cqhttp(1.1.0)暂未适配，所以请自行编译go-cqhttp-dev分支，或使用其他对接方式。如需旧版请移步release
+本项目使用1.1.5版本，由于当前go-cqhttp(1.1.0)暂未适配，所以请自行编译go-cqhttp-dev分支，或使用其他对接方式。如需旧版请移步release
 
 
 用于一键在Windows下部署[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)<br>
@@ -26,22 +26,26 @@
 
 ## 使用方法
 
-推荐您直接右键点击 `Qsign_Monitor.ps1` ，选择 `使用PowerShell运行`，这样在开启监控的同时会启动qsign服务端。
-
-你也可以直接双击 `Start_Qsign.bat` 启动qsign。
+直接双击 `Start_Qsign.bat` 启动qsign。
 
 如果 `Qsign_Monitor.ps1` 已经是开启状态，请不要重复运行。
 
 
 ## 关于Qsign_Monitor
 
-这个powershell脚本用于检测签名服务器是否正常工作，如果检测不到13579端口上有服务，那么就会重新运行 `Start_Qsign.bat`
-所以如果你自定义了端口，那么需要在这个脚本里也作相应的修改
+~~推荐您直接右键点击 `Qsign_Monitor.ps1` ，选择 `使用PowerShell运行`，这样在开启监控的同时会启动qsign服务端。~~
+
+~~这个powershell脚本用于检测签名服务器是否正常工作，如果检测不到13579端口上有服务，那么就会重新运行 `Start_Qsign.bat`~~
+~~所以如果你自定义了端口，那么需要在这个脚本里也作相应的修改~~
+
+这个脚本目前不能很好的运行，所以请暂时不要使用。(issues#3)
 
 
 ### 新特性
 
 #### 2023-07-07 
+
+更新至1.1.3版本
 
 现在，当与 `config.yml` 同级时，`Start_Qsign.bat` 会自动修改 `config.yml` 中的 `sign-server` 和 `key` 的值，实现了全面懒猪猪启动！
 
@@ -53,6 +57,14 @@
 
 更新至1.1.5，新特性请查看原仓库
 
+#### 2023-07-20
 
+更新至1.1.6，新增特性如下：
 
+启动时新增txlib_version参数，用于设定你所需要的txlib_version版本号。
 
+选项有`8.9.63`(默认)/`8.9.68`/`8.9.70`
+
+对于`go-cqhttp`的`dev`版本，目前仍是`8.9.63`，所以此处默认是`8.9.63`。
+
+如果你是其他客户端，比如`icqq`默认是`8.9.68`，请自行输入修改此项。
