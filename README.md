@@ -4,7 +4,7 @@
 # unidbg-fetch-qsign-onekey
 
 
-本项目使用1.1.6版本，由于当前go-cqhttp(1.1.0)暂未适配，内置了非官方编译版本的go-cqhttp。
+本项目使用1.1.6版本，由于当前go-cqhttp(1.1.0)暂未适配，内置了[非官方编译版本的go-cqhttp](https://github.com/rhwong/go-cqhttp-dev/tree/dev)。
 
 
 
@@ -24,7 +24,7 @@
 
 请将该脚本和 `go-cqhttp` 放在同一级目录，这时脚本会自动读取 `config.yml` 文件中的部分参数。
 
-如果你需要自定义协议版本，那么你可以编辑 `Start_Qsign.bat` 文件里最上方的变量部分。
+建议存放在不包含空格、中文的文件夹路径中。
 
 ## 使用方法
 
@@ -34,7 +34,7 @@
 
 如果脚本检测到 `config.yml` 尚未设定账号和密码，那么会提示你输入账号(Account uin)和密码(password)，输入后会同步进 `config.yml` 。
 
-如果日后需要修改 `txlib_version` 的版本，您可以删除文件夹根目录下的 `txlib_version.json` 来重新进入设定流程，也可以对此文件进行修改。
+如果日后需要修改 `txlib_version` 的版本以及其他参数，您可以删除文件夹根目录下的 `txlib_version.json` 来重新进入设定流程，也可以对此文件进行修改。
 
 ## 关于Qsign_Monitor
 
