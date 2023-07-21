@@ -236,36 +236,3 @@ grant codeBase "jrt:/jdk.crypto.mscapi" {
     permission java.security.SecurityPermission "authProvider.SunMSCAPI";
     permission java.util.PropertyPermission "*", "read";
 };
-
-
-grant codeBase "jrt:/com.azul.crs.client" {
-    permission jdk.jfr.FlightRecorderPermission "accessFlightRecorder";
-    permission java.util.PropertyPermission "*", "read,write";
-    permission java.lang.management.ManagementPermission "monitor";
-    permission java.lang.RuntimePermission "getenv.*";
-
-    permission java.io.FilePermission "<<ALL FILES>>","read,write,delete";
-
-    permission java.lang.RuntimePermission "shutdownHooks";
-    permission java.lang.RuntimePermission "setFactory";
-    permission java.net.SocketPermission "*","connect,resolve";
-    permission java.lang.reflect.ReflectPermission "suppressAccessChecks";
-
-    permission java.lang.RuntimePermission "createClassLoader";
-    permission java.lang.RuntimePermission "getClassLoader";
-    permission java.lang.RuntimePermission "createSecurityManager";
-
-    permission java.lang.RuntimePermission "accessClassInPackage.com.azul.tooling.in";
-    permission java.lang.RuntimePermission "accessClassInPackage.sun.net.dns";
-    permission java.lang.RuntimePermission "accessClassInPackage.jdk.jfr.internal";
-    permission java.lang.RuntimePermission "accessClassInPackage.sun.net.www.protocol.jar";
-    permission java.lang.RuntimePermission "accessClassInPackage.sun.launcher";
-};
-
-
-
-grant codeBase "jrt:/com.azul.tooling" {
-    permission java.lang.RuntimePermission "accessClassInPackage.com.azul.tooling.in";
-    permission java.util.PropertyPermission "*", "read,write";
-};
-
