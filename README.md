@@ -11,7 +11,9 @@
 <img src="https://img.shields.io/github/issues/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/github/forks/rhwong/unidbg-fetch-qsign-onekey"> 
 <img src="https://img.shields.io/github/stars/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/github/license/rhwong/unidbg-fetch-qsign-onekey">
 
-注意：本脚本仅适用于Windows x64
+注意：本一键包仅适用于Windows x64
+
+如需x86版本，请自行查看整合了go-cqhttp的test分支。
 
 <img src="https://img.shields.io/badge/Windows-x86__64-red?style=flat-square&logo=Windows"> 
 
