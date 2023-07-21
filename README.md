@@ -3,7 +3,9 @@
 
 # unidbg-fetch-qsign-onekey
 
-本项目使用1.1.6版本，由于当前go-cqhttp(1.1.0)暂未适配，所以请自行编译go-cqhttp-dev分支，或使用其他对接方式。如需旧版请移步release
+
+本项目使用1.1.6版本，由于当前go-cqhttp(1.1.0)暂未适配，内置了非官方编译版本的go-cqhttp。
+
 
 
 用于一键在Windows下部署[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)<br>
@@ -26,10 +28,13 @@
 
 ## 使用方法
 
-直接双击 `Start_Qsign.bat` 启动qsign。
+首先，运行 `go-cqhttp.bat`，按照提示生成 `config.yml` 。
 
-如果 `Qsign_Monitor.ps1` 已经是开启状态，请不要重复运行。
+双击 `Start_Qsign.bat` 启动qsign，按照提示依次键入 `txlib_version` 参数、设定`host`、`port`、`key`的值。（如果不知道这些是干什么的，请直接依次按下Enter）
 
+如果脚本检测到 `config.yml` 尚未设定账号和密码，那么会提示你输入账号(Account uin)和密码(password)，输入后会同步进 `config.yml 。
+
+如果日后需要修改 `txlib_version` 的版本，您可以删除文件夹根目录下的 `txlib_version.json` 来重新进入设定流程，也可以对此文件进行修改。
 
 ## 关于Qsign_Monitor
 
