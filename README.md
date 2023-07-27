@@ -10,6 +10,7 @@
 
 <img src="https://img.shields.io/github/issues/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/github/forks/rhwong/unidbg-fetch-qsign-onekey"> 
 <img src="https://img.shields.io/github/stars/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/github/license/rhwong/unidbg-fetch-qsign-onekey">
+<img src="https://img.shields.io/github/downloads/rhwong/unidbg-fetch-qsign-onekey/total">
 
 注意：本一键包仅适用于Windows x64
 
