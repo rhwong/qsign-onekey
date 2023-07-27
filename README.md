@@ -4,7 +4,7 @@
 # unidbg-fetch-qsign-onekey
 
 
-本项目使用1.1.6版本，由于当前go-cqhttp(1.1.0)暂未适配，内置了[非官方编译版本的go-cqhttp](https://github.com/rhwong/go-cqhttp-dev/tree/dev)。
+本项目使用1.1.7版本，由于当前go-cqhttp(1.1.0)暂未适配，内置了[非官方编译版本的go-cqhttp](https://github.com/rhwong/go-cqhttp-dev/tree/dev)。
 
 
 
@@ -73,3 +73,7 @@
 对于`go-cqhttp`的`dev`版本，目前仍是`8.9.63`，所以此处默认是`8.9.63`。
 
 如果你是其他客户端，比如`icqq`默认是`8.9.68`，请自行输入修改此项。
+
+#### 2023-07-27
+
+更新至1.1.7，新特性请查看原仓库
