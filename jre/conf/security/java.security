@@ -293,9 +293,7 @@ keystore.type.compat=true
 # RuntimePermission("accessClassInPackage."+package) has been granted.
 #
 package.access=sun.misc.,\
-               sun.reflect.,\
-               ,\
-               com.azul.crs.client.
+               sun.reflect.
 
 #
 # List of comma-separated packages that start with or equal this string
@@ -307,9 +305,7 @@ package.access=sun.misc.,\
 # checkPackageDefinition.
 #
 package.definition=sun.misc.,\
-                   sun.reflect.,\
-                   ,\
-                   com.azul.crs.client.
+                   sun.reflect.
 
 #
 # Determines whether this properties file can be appended to
