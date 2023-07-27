@@ -3,7 +3,7 @@
 
 # unidbg-fetch-qsign-onekey
 
-本项目使用1.1.6版本，由于当前go-cqhttp(1.1.0)暂未适配，请来[此repo下载](https://github.com/rhwong/go-cqhttp-dev/releases/tag/v1.1.1-dev)非官方编译版本。如需旧版请移步release
+本项目使用1.1.7版本，由于当前go-cqhttp(1.1.0)暂未适配，请来[此repo下载](https://github.com/rhwong/go-cqhttp-dev/releases/tag/v1.1.1-dev)非官方编译版本。如需旧版请移步release
 
 
 用于一键在Windows下部署[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)<br>
