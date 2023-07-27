@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 set JAVA_HOME=.\jre
-set "ver=1.1.6"
+set "ver=1.1.7"
 set "library=txlib/"
 set "config_file=config.yml"
 set "account=1233456"
