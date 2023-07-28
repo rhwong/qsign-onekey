@@ -4,7 +4,7 @@
 # unidbg-fetch-qsign-onekey
 
 
-本项目使用1.1.7版本，由于当前go-cqhttp(1.1.0)暂未适配，内置了[非官方编译版本的go-cqhttp](https://github.com/rhwong/go-cqhttp-dev/tree/dev)。
+本项目使用1.1.7版本，由于当前go-cqhttp(1.1.0)暂未适配，内置了非官方编译版本的[1umine/go-cqhttp`8ac00f6`](https://github.com/1umine/go-cqhttp/actions/runs/5692462867)。
 
 
 
