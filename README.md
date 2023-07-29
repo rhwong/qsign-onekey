@@ -12,11 +12,13 @@
 <img src="https://img.shields.io/github/stars/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/github/license/rhwong/unidbg-fetch-qsign-onekey">
 <img src="https://img.shields.io/github/downloads/rhwong/unidbg-fetch-qsign-onekey/total">
 
-注意：本一键包仅适用于Windows x64
+注意：本一键包推荐使用于Windows Server 2016 ~ 2022(21H2)
 
-如需x86版本，请自行查看整合了go-cqhttp的test分支。
+在较低的Windows可能出现支持不佳的情况，而对于最新的Windows11内核的Server版本，出现了严重兼容性问题，原因未知。
 
-<img src="https://img.shields.io/badge/Windows-x86__64-red?style=flat-square&logo=Windows"> 
+建议购买云服务器时不要选择Windows Server 2022
+
+<img src="https://img.shields.io/badge/Windows-x64-red?style=flat-square&logo=Windows"> <img src="https://img.shields.io/badge/Windows-x86-red?style=flat-square&logo=Windows"> 
 
 </div>
 <!-- projectInfo end -->
