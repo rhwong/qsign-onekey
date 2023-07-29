@@ -21,7 +21,7 @@ if not exist "txlib_version.json" (
   echo Please enter an option to save. 
   echo If you press enter directly, save the default values.
   echo ---------------------------------------------------------------
-  set /p "txlib_version=txlib_version(optional:8.9.63(default)/8.9.68/8.9.70): "
+  set /p "txlib_version=txlib_version(optional:8.9.58/8.9.63(default)/8.9.68/8.9.70): "
        if "!txlib_version!"=="" (
 	   set "txlib_version=8.9.63"
        )  
@@ -65,16 +65,17 @@ REM  if "!txlib_version!"=="8.9.73" (
 REM    echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": true, "protocol": { "qua": "V1_AND_SQ_8.9.70_4330_YYB_D", "version": "8.9.70", "code": "4330" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "!json_file!"
 REM	  echo {"txlib_version": "8.9.73"} > txlib_version.json
 REM	)
-
-  if "!txlib_version!" neq "8.9.63" (
-      if "!txlib_version!" neq "8.9.68" (
-		 if "!txlib_version!" neq "8.9.70" (
-			echo Warning: Wrong txlib_ Version. The protocol must be 8.9.63/8.9.68/8.9.70
-			timeout 10
-			exit /b
-		)
+  if "!txlib_version!" neq "8.9.58" (
+    if "!txlib_version!" neq "8.9.63" (
+        if "!txlib_version!" neq "8.9.68" (
+          if "!txlib_version!" neq "8.9.70" (
+            echo Warning: Wrong txlib_ Version. The protocol must be 8.9.58/8.9.63/8.9.68/8.9.70
+            timeout 10
+            exit /b
+          )
+        )
       )
-    )
+  )
 ) else (   
   for /F "delims=" %%D in ('lib\jq.exe -r ".txlib_version" txlib_version.json') do set "txlib_version=%%D"
   set "json_file=%library%!txlib_version!/config.json"
