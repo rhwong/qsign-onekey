@@ -14,10 +14,6 @@
 
 注意：本一键包推荐使用于Windows Server 2016 ~ 2022(21H2)
 
-在较低的Windows可能出现支持不佳的情况，而对于最新的Windows11内核的Server版本，出现了严重兼容性问题，原因未知。
-
-建议购买云服务器时不要选择Windows Server 2022
-
 <img src="https://img.shields.io/badge/Windows-x64-red?style=flat-square&logo=Windows"> <img src="https://img.shields.io/badge/Windows-x86-red?style=flat-square&logo=Windows"> 
 
 </div>
@@ -28,6 +24,10 @@
 请将本项目和 `go-cqhttp` 放在同一级目录，这时脚本会自动读取 `config.yml` 文件中的部分参数。
 
 如果你需要对接其他登录端，可以直接解压缩到任意不包含中文和空格的路径中。
+
+已知问题是在较低的Windows可能出现支持不佳的情况，而对于最新的Windows11内核的Server版本，出现了严重兼容性问题，具体表现为对接go-cqhttp是出现各种报错，原因未知。
+
+建议购买云服务器时不要选择Windows Server 2022
 
 ## ✨使用方法
 
