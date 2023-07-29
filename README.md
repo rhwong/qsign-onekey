@@ -49,7 +49,7 @@ key已经在开始时设定过，如果您没设定，那么默认是 `114514191
 
 参考上方，略过部分go-cqhttp相关步骤。
 
-## 🎉关于Qsign_Monitor
+## ❌关于Qsign_Monitor
 
 ~~推荐您直接右键点击 `Qsign_Monitor.ps1` ，选择 `使用PowerShell运行`，这样在开启监控的同时会启动qsign服务端。~~
 
