@@ -31,19 +31,19 @@
 
 ### 如何使用go-cqhttp联动运行
 
-首先，运行 `go-cqhttp.bat`，按照提示生成 `config.yml` 。(👈如果放在同一个目录下运行，独立运行略过此步骤）
+1. 首先，运行 `go-cqhttp.bat`，按照提示生成 `config.yml` 。(👈如果放在同一个目录下运行，独立运行略过此步骤）
 
-双击 `Start_Qsign.bat` 启动qsign，按照提示依次键入 `txlib_version` 参数、设定`host`、`port`、`key`的值。 (👈如果不知道这些是干什么的，请直接依次按下Enter）
+2. 双击 `Start_Qsign.bat` 启动qsign，按照提示依次键入 `txlib_version` 参数、设定`host`、`port`、`key`的值。 (👈如果不知道这些是干什么的，请直接依次按下Enter）
 
-在启动完成后，qsign会告诉您当前运行api的地址，如果您没设定过host和key，那么默认是 `http://127.0.0.1:13579`
+3. 在启动完成后，qsign会告诉您当前运行api的地址，如果您没设定过host和key，那么默认是 `http://127.0.0.1:13579`
 
 key已经在开始时设定过，如果您没设定，那么默认是 `1145141919810`
 
 请将这两个参数填写到需要设定账号的签名服务器的地方。
 
-如果脚本检测到 `config.yml` 尚未设定账号和密码，那么会提示你输入账号(Account uin)和密码(password)，输入后会同步进 `config.yml` 。
+4. 如果脚本检测到 `config.yml` 尚未设定账号和密码，那么会提示你输入账号(Account uin)和密码(password)，输入后会同步进 `config.yml` 。
 
-如果日后需要修改 `txlib_version` 的版本，您可以删除文件夹根目录下的 `txlib_version.json` 来重新进入设定流程，也可以对此文件进行修改。
+5. 如果日后需要修改 `txlib_version` 的版本，您可以删除文件夹根目录下的 `txlib_version.json` 来重新进入设定流程，也可以对此文件进行修改。
 
 ### 如何独立运行
 
@@ -85,19 +85,19 @@ key已经在开始时设定过，如果您没设定，那么默认是 `114514191
 
 更新至1.1.3版本
 
-现在，当与 `config.yml` 同级时，`Start_Qsign.bat` 会自动修改 `config.yml` 中的 `sign-server` 和 `key` 的值，实现了全面懒猪猪启动！
+- 现在，当与 `config.yml` 同级时，`Start_Qsign.bat` 会自动修改 `config.yml` 中的 `sign-server` 和 `key` 的值，实现了全面懒猪猪启动！
 
 并且，第一次运行时，会提示你设定`host`、`port`、`key`的值，如果你不想输入，或者不知道怎么输入，请直接按下enter键。
 
-程序默认运行在`8.9.63`版本，如果后续`go-cqhttp`的正式版本中自带的协议有更新，那么本仓库也会同步更新脚本，建议点亮star及时关注哦！
+- 程序默认运行在`8.9.63`版本，如果后续`go-cqhttp`的正式版本中自带的协议有更新，那么本仓库也会同步更新脚本，建议点亮star及时关注哦！
 
 #### 📅2023-07-18 
 
-更新至1.1.5，新特性请查看原仓库
+- 更新至1.1.5，新特性请查看原仓库
 
 #### 📅2023-07-20
 
-更新至1.1.6，新增特性如下：
+- 更新至1.1.6，新增特性如下：
 
 启动时新增txlib_version参数，用于设定你所需要的txlib_version版本号。
 
@@ -109,22 +109,22 @@ key已经在开始时设定过，如果您没设定，那么默认是 `114514191
 
 #### 📅2023-07-27
 
-更新至1.1.7，新特性请查看原仓库
+- 更新至1.1.7，新特性请查看原仓库
 
 #### 📅2023-07-30
 
 support:txlib_8.9.58
 
-偷了几个`android_pad.json` `android_phone.json`回来，方便客户端与签名服务端的协议信息相匹配。[MrXiaoM/qsign](https://github.com/MrXiaoM/qsign)
+- 偷了几个`android_pad.json` `android_phone.json`回来，方便客户端与签名服务端的协议信息相匹配。[MrXiaoM/qsign](https://github.com/MrXiaoM/qsign)
 
-拉取了fix版本的1.1.7（我还真没发现后面有fix，好像当前版本会崩溃，不知道fix版本修复没修复鸭）fuqiuluo/unidbg-fetch-qsign#164
+- 拉取了fix版本的1.1.7（我还真没发现后面有fix，好像当前版本会崩溃，不知道fix版本修复没修复鸭）fuqiuluo/unidbg-fetch-qsign#164
 
-🎉另外祝我生日快乐~🥰🎂
+- 🎉另外祝我生日快乐~🥰🎂
 
 ## ✨免责声明
 
-本仓库所有关于qsign签名服务的二进制文件均来自于[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)
+- 本仓库所有关于qsign签名服务的二进制文件均来自于[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)
 
-本仓库所使用的关于go-cqhttp与qsign版本不适配期间所代用的非官方版本go-cqhttp，均来自于自己或其他人的action/release，并且会注明来源。
+- 本仓库所使用的关于go-cqhttp与qsign版本不适配期间所代用的非官方版本go-cqhttp，均来自于自己或其他人的action/release，并且会注明来源。
 
-本仓库所有二进制文件您都可以根据SHA1校验其与官方仓库的二进制文件的一致性，本人现在及将来均不会对此仓库所有分支的二进制文件所有(可能发生的)安全问题负责。
+- 本仓库所有二进制文件您都可以根据SHA1校验其与官方仓库的二进制文件的一致性，本人现在及将来均不会对此仓库所有分支的二进制文件所有(可能发生的)安全问题负责。
