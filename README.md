@@ -51,7 +51,7 @@ key已经在开始时设定过，如果您没设定，那么默认是 `114514191
 
 ## 🌏分享您的Qsign API
 
-您可以在[这里](https://github.com/rhwong/unidbg-fetch-qsign-onekey/issues/8) 分享您的Qsign API以供其他设备性能较弱，或不适用于unidbg1的设备测试及使用。
+您可以在 [这里](https://github.com/rhwong/unidbg-fetch-qsign-onekey/issues/8) 分享您的Qsign API以供其他设备性能较弱，或不适用于unidbg1的设备测试及使用。
 
 我们在 [这里](https://qsign.dev) 分享公益的Qsign API，但是请使用者注意，我们不建议也不推荐您长期使用公益API。
 
