@@ -90,3 +90,11 @@ key已经在开始时设定过，如果您没设定，那么默认是 `114514191
 #### 2023-07-27
 
 更新至1.1.7，新特性请查看原仓库
+
+#### 2023-07-27
+
+support:txlib_8.9.58
+
+偷了几个`android_pad.json``android_phone.json`回来，方便客户端与签名服务端的协议信息相匹配。(MrXiaoM/qsign)
+
+拉取了fix版本的1.1.7（我还真没发现后面有fix，好像当前版本会崩溃，不知道fix版本修复没修复鸭）fuqiuluo/unidbg-fetch-qsign#164

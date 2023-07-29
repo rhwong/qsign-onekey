@@ -14,5 +14,8 @@
     "dynarmic": false,
     "unicorn": true,
     "debug": false
-  }
+  },
+  "black_list": [
+    1008611
+  ]
 }

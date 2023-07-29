@@ -39,23 +39,33 @@ if not exist "txlib_version.json" (
       if "!key!"=="" (
       set "key=1145141919810"
       )
+
+  if "!txlib_version!"=="8.9.58" (
+    echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": true, "protocol": { "qua": "V1_AND_SQ_8.9.58_4106_YYB_D", "version": "8.9.58", "code": "4106" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "!json_file!"
+	  echo {"txlib_version": "8.9.63"} > txlib_version.json
+	)
+
   if "!txlib_version!"=="8.9.63" (
     echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": true, "protocol": { "qua": "V1_AND_SQ_8.9.63_4194_YYB_D", "version": "8.9.63", "code": "4194" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "!json_file!"
-	echo {"txlib_version": "8.9.63"} > txlib_version.json
+	  echo {"txlib_version": "8.9.63"} > txlib_version.json
 	)
 
   if "!txlib_version!"=="8.9.68" (
-REM OLD_PROTOCOL WHO KNOW WHATS THIS?
-REM echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": true, "protocol": { "qua": "V1_AND_SQ_8.9.68_4218_HDBM_T", "version": "8.9.68", "code": "4218" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "!json_file!"
-	echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": true, "protocol": { "qua": "V1_AND_SQ_8.9.68_4264_YYB_D", "version": "8.9.68", "code": "4264" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "!json_file!"
-	echo {"txlib_version": "8.9.68"} > txlib_version.json
+	  echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": true, "protocol": { "qua": "V1_AND_SQ_8.9.68_4264_YYB_D", "version": "8.9.68", "code": "4264" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "!json_file!"
+	  echo {"txlib_version": "8.9.68"} > txlib_version.json
     )
 	
   if "!txlib_version!"=="8.9.70" (
-    echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": true, "protocol": { "qua": "V1_AND_SQ_8.9.70_4292_HDBM_T", "version": "8.9.70", "code": "4292" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "!json_file!"
-	echo {"txlib_version": "8.9.70"} > txlib_version.json
+    echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": true, "protocol": { "qua": "V1_AND_SQ_8.9.70_4330_YYB_D", "version": "8.9.70", "code": "4330" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "!json_file!"
+	  echo {"txlib_version": "8.9.70"} > txlib_version.json
 	)
 	
+REM  谁有8.9.73的文件啊给点给点，我懒得解包了。
+REM  if "!txlib_version!"=="8.9.73" (
+REM    echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": true, "protocol": { "qua": "V1_AND_SQ_8.9.70_4330_YYB_D", "version": "8.9.70", "code": "4330" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "!json_file!"
+REM	  echo {"txlib_version": "8.9.73"} > txlib_version.json
+REM	)
+
   if "!txlib_version!" neq "8.9.63" (
       if "!txlib_version!" neq "8.9.68" (
 		 if "!txlib_version!" neq "8.9.70" (
