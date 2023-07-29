@@ -100,3 +100,11 @@ support:txlib_8.9.58
 拉取了fix版本的1.1.7（我还真没发现后面有fix，好像当前版本会崩溃，不知道fix版本修复没修复鸭）fuqiuluo/unidbg-fetch-qsign#164
 
 🎉另外祝我生日快乐~🥰🎂
+
+## ✨免责声明
+
+本仓库所有关于qsign签名服务的二进制文件均来自于[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)
+
+本仓库所使用的关于go-cqhttp与qsign版本不适配期间所代用的非官方版本go-cqhttp，均来自于自己或其他人的action/release，并且会注明来源。
+
+本仓库所有二进制文件您都可以根据SHA1校验其与官方仓库的二进制文件的一致性，本人现在及将来均不会对此仓库所有分支的二进制文件所有(可能发生的)安全问题负责。
