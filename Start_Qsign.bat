@@ -60,7 +60,7 @@ if not exist "txlib_version.json" (
 	  echo {"txlib_version": "8.9.70"} > txlib_version.json
 	)
 	
-REM  谁有8.9.73的文件啊给点给点，我懒得解包了。
+REM  WHO HAVE 8.9.73 PROTOCOL? I'M LAZY TO UNPACK!
 REM  if "!txlib_version!"=="8.9.73" (
 REM    echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": true, "protocol": { "qua": "V1_AND_SQ_8.9.70_4330_YYB_D", "version": "8.9.70", "code": "4330" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "!json_file!"
 REM	  echo {"txlib_version": "8.9.73"} > txlib_version.json
