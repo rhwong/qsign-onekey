@@ -94,8 +94,7 @@ if exist "%config_file%" (
   lib\sed.exe -i "/# sign-server:/d" "%config_file%"
   if "!host!"=="0.0.0.0" (
     lib\sed.exe -i "s/sign-server:.*/sign-server: 'http:\/\/localhost:!port!'/g; s/key:.*/key: '!key!'/g" "%config_file%"
-    ) 
-  else ( 
+    ) else ( 
     lib\sed.exe -i "s/sign-server:.*/sign-server: 'http:\/\/!host!:!port!'/g; s/key:.*/key: '!key!'/g" "%config_file%"
     )
 ) else (
