@@ -1,0 +1,21 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8080
+  },
+  "key": "114514",
+  "auto_register": false,
+  "protocol": {
+    "qua": "V1_AND_SQ_8.9.58_4106_YYB_D",
+    "version": "8.9.58",
+    "code": "4106"
+  },
+  "unidbg": {
+    "dynarmic": false,
+    "unicorn": true,
+    "debug": false
+  },
+  "black_list": [
+    1008611
+  ]
+}

@@ -21,7 +21,7 @@ if not exist "txlib_version.json" (
   echo Please enter an option to save. 
   echo If you press enter directly, save the default values.
   echo ---------------------------------------------------------------
-  set /p "txlib_version=txlib_version(optional:8.9.63(default)/8.9.68/8.9.70): "
+  set /p "txlib_version=txlib_version(optional:8.9.58/8.9.63(default)/8.9.68/8.9.70): "
        if "!txlib_version!"=="" (
 	   set "txlib_version=8.9.63"
        )  
@@ -39,32 +39,43 @@ if not exist "txlib_version.json" (
       if "!key!"=="" (
       set "key=1145141919810"
       )
+
+  if "!txlib_version!"=="8.9.58" (
+    echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": true, "protocol": { "qua": "V1_AND_SQ_8.9.58_4106_YYB_D", "version": "8.9.58", "code": "4106" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "!json_file!"
+	  echo {"txlib_version": "8.9.58"} > txlib_version.json
+	)
+
   if "!txlib_version!"=="8.9.63" (
     echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": true, "protocol": { "qua": "V1_AND_SQ_8.9.63_4194_YYB_D", "version": "8.9.63", "code": "4194" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "!json_file!"
-	echo {"txlib_version": "8.9.63"} > txlib_version.json
+	  echo {"txlib_version": "8.9.63"} > txlib_version.json
 	)
 
   if "!txlib_version!"=="8.9.68" (
-REM OLD_PROTOCOL WHO KNOW WHATS THIS?
-REM echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": true, "protocol": { "qua": "V1_AND_SQ_8.9.68_4218_HDBM_T", "version": "8.9.68", "code": "4218" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "!json_file!"
-	echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": true, "protocol": { "qua": "V1_AND_SQ_8.9.68_4264_YYB_D", "version": "8.9.68", "code": "4264" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "!json_file!"
-	echo {"txlib_version": "8.9.68"} > txlib_version.json
+	  echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": true, "protocol": { "qua": "V1_AND_SQ_8.9.68_4264_YYB_D", "version": "8.9.68", "code": "4264" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "!json_file!"
+	  echo {"txlib_version": "8.9.68"} > txlib_version.json
     )
 	
   if "!txlib_version!"=="8.9.70" (
-    echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": true, "protocol": { "qua": "V1_AND_SQ_8.9.70_4292_HDBM_T", "version": "8.9.70", "code": "4292" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "!json_file!"
-	echo {"txlib_version": "8.9.70"} > txlib_version.json
+    echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": true, "protocol": { "qua": "V1_AND_SQ_8.9.70_4330_YYB_D", "version": "8.9.70", "code": "4330" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "!json_file!"
+	  echo {"txlib_version": "8.9.70"} > txlib_version.json
 	)
 	
-  if "!txlib_version!" neq "8.9.63" (
-      if "!txlib_version!" neq "8.9.68" (
-		 if "!txlib_version!" neq "8.9.70" (
-			echo Warning: Wrong txlib_ Version. The protocol must be 8.9.63/8.9.68/8.9.70
-			timeout 10
-			exit /b
-		)
+REM  WHO HAVE 8.9.73 PROTOCOL? I'M LAZY TO UNPACK!
+REM  if "!txlib_version!"=="8.9.73" (
+REM    echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": true, "protocol": { "qua": "V1_AND_SQ_8.9.70_4330_YYB_D", "version": "8.9.70", "code": "4330" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "!json_file!"
+REM	  echo {"txlib_version": "8.9.73"} > txlib_version.json
+REM	)
+  if "!txlib_version!" neq "8.9.58" (
+    if "!txlib_version!" neq "8.9.63" (
+        if "!txlib_version!" neq "8.9.68" (
+          if "!txlib_version!" neq "8.9.70" (
+            echo Warning: Wrong txlib_ Version. The protocol must be 8.9.58/8.9.63/8.9.68/8.9.70
+            timeout 10
+            exit /b
+          )
+        )
       )
-    )
+  )
 ) else (   
   for /F "delims=" %%D in ('lib\jq.exe -r ".txlib_version" txlib_version.json') do set "txlib_version=%%D"
   set "json_file=%library%!txlib_version!/config.json"
@@ -81,7 +92,11 @@ REM echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto
 
 if exist "%config_file%" (
   lib\sed.exe -i "/# sign-server:/d" "%config_file%"
-  lib\sed.exe -i "s/sign-server:.*/sign-server: 'http:\/\/!host!:!port!'/g; s/key:.*/key: '!key!'/g" "%config_file%"
+  if "!host!"=="0.0.0.0" (
+    lib\sed.exe -i "s/sign-server:.*/sign-server: 'http:\/\/localhost:!port!'/g; s/key:.*/key: '!key!'/g" "%config_file%"
+    ) else ( 
+    lib\sed.exe -i "s/sign-server:.*/sign-server: 'http:\/\/!host!:!port!'/g; s/key:.*/key: '!key!'/g" "%config_file%"
+    )
 ) else (
   echo Run separately from go-cqhttp. Please enter the sign-server address and KEY in go-cqhttp config.
 )

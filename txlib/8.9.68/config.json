@@ -4,7 +4,7 @@
     "port": 8080
   },
   "key": "114514",
-  "auto_register": true,
+  "auto_register": false,
   "protocol": {
     "qua": "V1_AND_SQ_8.9.68_4264_YYB_D",
     "version": "8.9.68",
@@ -13,7 +13,7 @@
   "unidbg": {
     "dynarmic": false,
     "unicorn": true,
-    "debug": true
+    "debug": false
   },
   "black_list": [
     1008611
