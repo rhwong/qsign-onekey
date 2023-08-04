@@ -21,7 +21,7 @@
 
 ## ✨安装说明
 
-请直接点击 `Code - Download ZIP` 下载本项目，当前release里是用于正式版本go-cqhttp的旧版本
+请直接点击 `Code - Download ZIP` 下载本项目，(当前release里是用于正式版本go-cqhttp的旧版本qsign)
 
 请将本项目和 `go-cqhttp` 放在同一级目录，这时脚本会自动读取 `config.yml` 文件中的部分参数。
 
