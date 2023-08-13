@@ -62,7 +62,7 @@ if not exist "txlib_version.json" (
 	
 
   if "!txlib_version!"=="8.9.73" (
-    echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": true, "protocol": { "qua": "V1_AND_SQ_8.9.73_4354_YYB_D", "version": "8.9.73", "code": "4332" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "!json_file!"
+    echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": true, "protocol": { "qua": "V1_AND_SQ_8.9.73_4416_YYB_D", "version": "8.9.73", "code": "4416" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "!json_file!"
 	  echo {"txlib_version": "8.9.73"} > txlib_version.json
 	)
 
