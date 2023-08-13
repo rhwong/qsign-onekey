@@ -135,7 +135,7 @@ support:txlib_8.9.58
 
 支持自动同步协议文件
 
-当您选择了`txlib_version`版本时，自动同步协议文件至`go-cqhttp`的`data/versions`文件夹中，以签名服务器防止协议与客户端不同步。
+当您选择了`txlib_version`版本时，自动同步协议文件至`go-cqhttp`的`data/versions`文件夹中，以防止签名服务器协议与客户端不同步。
 
 ## ✨免责声明
 
