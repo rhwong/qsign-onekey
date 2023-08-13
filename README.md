@@ -121,6 +121,10 @@ support:txlib_8.9.58
 
 更新 `go-cqhttp` 至 `3b99a82`
 
+#### 📅2023-08-14
+
+更新 `go-cqhttp` 至 `7346b61`
+
 ## ✨免责声明
 
 - 本仓库所有关于qsign签名服务的二进制文件均来自于[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)
