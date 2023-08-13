@@ -1,4 +1,5 @@
 @echo off
+title Qsign-Onekey by rhwong v1.1.7-b2
 setlocal enabledelayedexpansion
 set JAVA_HOME=.\jre
 set "ver=1.1.7b2"
@@ -14,13 +15,19 @@ for /F "delims=" %%D in ('lib\jq.exe -r ".txlib_version" txlib_version.json') do
 
 set "json_file=%library%%txlib_version%/config.json"
 
+echo " ______  ______  __  ______  __   __       ______  __   __  ______  __  __  ______  __  __    "
+echo "/\  __ \/\  ___\/\ \/\  ___\/\ \-.\ \     /\  __ \/\ \-.\ \/\  ___\/\ \/ / /\  ___\/\ \_\ \   "
+echo "\ \ \/\_\ \___  \ \ \ \ \__ \ \ \-.  \    \ \ \/\ \ \ \-.  \ \  __\\ \  _'-\ \  __\\ \____ \  "
+echo " \ \___\_\/\_____\ \_\ \_____\ \_\\ \_\    \ \_____\ \_\\ \_\ \_____\ \_\ \_\ \_____\/\_____\ "
+echo "  \/___/_/\/_____/\/_/\/_____/\/_/ \/_/     \/_____/\/_/ \/_/\/_____/\/_/\/_/\/_____/\/_____/ "
+                                                                                              
 if not exist "txlib_version.json" (
-  echo ---------------------------------------------------------------
+  echo -------------------------------------------------------------------------------------------------
   echo unidbg-fetch-qsign-onekey Ver.%ver%
   echo txlib_version_config_file does not exist.
   echo Please enter an option to save. 
   echo If you press enter directly, save the default values.
-  echo ---------------------------------------------------------------
+  echo -------------------------------------------------------------------------------------------------
   set /p "txlib_version=txlib_version(optional:8.9.58/8.9.63(default)/8.9.68/8.9.70/8.9.73): "
        if "!txlib_version!"=="" (
 	   set "txlib_version=8.9.63"
@@ -82,11 +89,11 @@ if not exist "txlib_version.json" (
 ) else (   
   for /F "delims=" %%D in ('lib\jq.exe -r ".txlib_version" txlib_version.json') do set "txlib_version=%%D"
   set "json_file=%library%!txlib_version!/config.json"
-  echo ---------------------------------------------------------------
+  echo -------------------------------------------------------------------------------------------------
   echo unidbg-fetch-qsign-onekey Ver.%ver%
   echo txlib_Version is %txlib_version%
   echo If you want to change txlib_version , please delete [txlib_version.json]!
-  echo ---------------------------------------------------------------
+  echo -------------------------------------------------------------------------------------------------
   for /F "delims=" %%A in ('lib\jq.exe -r ".server.host" %json_file%') do set "host=%%A"
   for /F "delims=" %%B in ('lib\jq.exe -r ".server.port" %json_file%') do set "port=%%B"
   for /F "delims=" %%C in ('lib\jq.exe -r ".key" %json_file%') do set "key=%%C"
@@ -116,21 +123,21 @@ if exist "go-cqhttp.exe" (
   if %errorlevel% equ 0 (
       set /p "account=Account uin: "
       set /p "password=Password: "
-      echo ---------------------------------------------------------------
+      echo -------------------------------------------------------------------------------------------------
       echo Your uin:!account! password:!password!
       lib\sed.exe -i "s/uin: 1233456/uin: !account!/g; s/password: ''/password: '!password!'/g; s/auto-refresh-token: false/auto-refresh-token: true/g" "%config_file%"
       echo Account and password saved!
   ) else (
-      echo ---------------------------------------------------------------
+      echo -------------------------------------------------------------------------------------------------
       echo The [config.yml] already contains account information or not exist.
       echo Skip account settings.
   )
 
-echo ---------------------------------------------------------------
+echo -------------------------------------------------------------------------------------------------
 echo Qsign API:http://!host!:!port!
 echo KEY=!key!
 echo Qsign_version:%ver%
 echo TXlib_version:%txlib_version% 
-echo ---------------------------------------------------------------
+echo -------------------------------------------------------------------------------------------------
 timeout /t 3 > nul
 bin\unidbg-fetch-qsign --basePath=%library%%txlib_version%
