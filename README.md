@@ -131,6 +131,12 @@ support:txlib_8.9.58
 
 - update go-cqhttp -> [fd71785](https://github.com/1umine/go-cqhttp/actions/runs/5841440190)
 
+##### Feat!🎉
+
+支持自动同步协议文件
+
+当您选择了`txlib_version`版本时，自动同步协议文件至`go-cqhttp`的`data/versions`文件夹中，以签名服务器防止协议与客户端不同步。
+
 ## ✨免责声明
 
 - 本仓库所有关于qsign签名服务的二进制文件均来自于[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)
