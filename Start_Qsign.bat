@@ -92,28 +92,39 @@ if not exist "txlib_version.json" (
   for /F "delims=" %%C in ('lib\jq.exe -r ".key" %json_file%') do set "key=%%C"
 )
 
-
-if exist "%config_file%" (
-  lib\sed.exe -i "/# sign-server:/d" "%config_file%"
-  if "!host!"=="0.0.0.0" (
-    lib\sed.exe -i "s/sign-server:.*/sign-server: 'http:\/\/localhost:!port!'/g; s/key:.*/key: '!key!'/g" "%config_file%"
-    ) else ( 
-    lib\sed.exe -i "s/sign-server:.*/sign-server: 'http:\/\/!host!:!port!'/g; s/key:.*/key: '!key!'/g" "%config_file%"
-    )
+if exist "go-cqhttp.exe" (
+  if exist "%config_file%" (
+    lib\sed.exe -i "/# sign-server:/d" "%config_file%"
+    if "!host!"=="0.0.0.0" (
+      lib\sed.exe -i "s/sign-server:.*/sign-server: 'http:\/\/localhost:!port!'/g; s/key:.*/key: '!key!'/g" "%config_file%"
+      ) else ( 
+      lib\sed.exe -i "s/sign-server:.*/sign-server: 'http:\/\/!host!:!port!'/g; s/key:.*/key: '!key!'/g" "%config_file%"
+      )
+  ) else (
+    echo Can't find [config.yml]. If you forgot to generate it, please run [go-cqhttp.bat]
+  )
+      echo Sync protocol version to go-cqhttp data folder.
+      md data\versions
+      copy txlib\!txlib_version!\android_pad.json data\versions\6.json
+      copy txlib\!txlib_version!\android_phone.json data\versions\1.json
 ) else (
-  echo Run separately from go-cqhttp. Please enter the sign-server address and KEY in go-cqhttp config.
-)
-
-findstr /C:"uin: 1233456" "%config_file%" 2>nul >nul
-if %errorlevel% equ 0 (
-    set /p "account=Account uin: "
-    set /p "password=Password: "
-    echo Your uin:!account! password:!password!
-    lib\sed.exe -i "s/uin: 1233456/uin: !account!/g; s/password: ''/password: '!password!'/g; s/auto-refresh-token: false/auto-refresh-token: true/g" "%config_file%"
-    echo Account and password saved!
-) else (
-    echo The config file already contains account information.
-)
+  echo Run separately from go-cqhttp?
+  echo Please manually synchronize the protocol version.
+  echo And enter the Qsign API ADDRESS and KEY to other client.
+)  
+  findstr /C:"uin: 1233456" "%config_file%" 2>nul >nul
+  if %errorlevel% equ 0 (
+      set /p "account=Account uin: "
+      set /p "password=Password: "
+      echo ---------------------------------------------------------------
+      echo Your uin:!account! password:!password!
+      lib\sed.exe -i "s/uin: 1233456/uin: !account!/g; s/password: ''/password: '!password!'/g; s/auto-refresh-token: false/auto-refresh-token: true/g" "%config_file%"
+      echo Account and password saved!
+  ) else (
+      echo ---------------------------------------------------------------
+      echo The [config.yml] already contains account information or not exist.
+      echo Skip account settings.
+  )
 
 echo ---------------------------------------------------------------
 echo Qsign API:http://!host!:!port!
