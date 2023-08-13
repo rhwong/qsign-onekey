@@ -3,7 +3,7 @@
 
 # unidbg-fetch-qsign-onekey
 
-本项目使用1.1.7版本，整合了开发版本的go-cqhttp，来源[在这](https://github.com/rhwong/go-cqhttp-dev/releases/tag/v1.1.1-dev)
+本项目使用1.1.7b2版本，整合了开发版本的go-cqhttp，来源[fd71785](https://github.com/1umine/go-cqhttp/actions/runs/5841440190)
 
 用于一键在Windows下部署[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)<br>
 
@@ -123,7 +123,13 @@ support:txlib_8.9.58
 
 #### 📅2023-08-14
 
-更新 `go-cqhttp` 至 `7346b61`
+更新 1.1.7 分支的 `go-cqhttp` 至 `7346b61`
+
+##### Create branch 1.1.7b2 
+
+- support:txlib 8.9.73
+
+- update go-cqhttp -> [fd71785](https://github.com/1umine/go-cqhttp/actions/runs/5841440190)
 
 ## ✨免责声明
 
