@@ -28,7 +28,7 @@ if not exist "txlib_version.json" (
   echo Please enter an option to save. 
   echo If you press enter directly, save the default values.
   echo -------------------------------------------------------------------------------------------------
-  set /p "txlib_version=txlib_version(optional:8.9.58/8.9.63(default)/8.9.68/8.9.70/8.9.73): "
+  set /p "txlib_version=txlib_version(optional:8.9.58/8.9.63(default)/8.9.68/8.9.70): "
        if "!txlib_version!"=="" (
 	   set "txlib_version=8.9.63"
        )  
@@ -68,10 +68,10 @@ if not exist "txlib_version.json" (
 	)
 	
 
-  if "!txlib_version!"=="8.9.73" (
-    echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": true, "protocol": { "qua": "V1_AND_SQ_8.9.73_4416_YYB_D", "version": "8.9.73", "code": "4416" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "!json_file!"
-	  echo {"txlib_version": "8.9.73"} > txlib_version.json
-	)
+REM  if "!txlib_version!"=="8.9.73" (
+REM    echo { "server": { "host": "!host!", "port": !port! }, "key": "!key!", "auto_register": true, "protocol": { "qua": "V1_AND_SQ_8.9.73_4416_YYB_D", "version": "8.9.73", "code": "4416" }, "unidbg": { "dynarmic": false, "unicorn": true, "debug": false } } > "!json_file!"
+REM	  echo {"txlib_version": "8.9.73"} > txlib_version.json
+REM	)
 
   if "!txlib_version!" neq "8.9.58" (
     if "!txlib_version!" neq "8.9.63" (
