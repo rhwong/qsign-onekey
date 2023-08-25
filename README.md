@@ -18,9 +18,6 @@
 </div>
 <!-- projectInfo end -->
 
-# 当前本分支有故障，无法和go-cqhttp对接，请不要使用
-
-详见[fuqiuluo/unidbg-fetch-qsign#229](https://github.com/fuqiuluo/unidbg-fetch-qsign/issues/229)
 
 ## ✨安装说明
 
