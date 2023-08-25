@@ -1,0 +1,19 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8080
+  },
+  "key": "114514",
+  "auto_register": true,
+  "protocol": {
+    "package_name": "com.tencent.tim",
+    "qua": "V1_AND_SQ_8.3.9_352_TIM_D",
+    "version": "3.5.2",
+    "code": "1308"
+  },
+  "unidbg": {
+    "dynarmic": false,
+    "unicorn": true,
+    "debug": true
+  }
+}

@@ -137,6 +137,16 @@ support:txlib_8.9.58
 
 当您选择了`txlib_version`版本时，自动同步协议文件至`go-cqhttp`的`data/versions`文件夹中，以防止签名服务器协议与客户端不同步。
 
+#### 📅2023-08-26
+
+##### Create branch 1.1.9 
+
+- support:txlib 8.9.71/3.5.1(TIM)/3.5.2(TIM)
+
+- update go-cqhttp -> [d85d697](https://github.com/Mrs4s/go-cqhttp/actions/runs/5947215015)
+
+跟随上游更新了TIM相关协议支持，8.9.71没偷到PAD的protocol文件，所以只能用PHONE，所以请注意在device.json里切换协议。
+
 ## ✨免责声明
 
 - 本仓库所有关于qsign签名服务的二进制文件均来自于[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)
@@ -144,3 +154,5 @@ support:txlib_8.9.58
 - 本仓库所使用的关于go-cqhttp与qsign版本不适配期间所代用的非官方版本go-cqhttp，均来自于自己或其他人的action/release，并且会注明来源。
 
 - 本仓库所有二进制文件您都可以根据SHA1校验其与官方仓库的二进制文件的一致性，本人现在及将来均不会对此仓库所有分支的二进制文件所有(可能发生的)安全问题负责。
+
+
