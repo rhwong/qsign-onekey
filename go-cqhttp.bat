@@ -7,7 +7,7 @@ if not exist "txlib_version.json" (
 for /F "delims=" %%D in ('lib\jq.exe -r ".txlib_version" txlib_version.json') do set "txlib_version=%%D" 
 )
 if "!txlib_version!"=="8.9.71" (
-    echo The protocol[8.9.71] just support ANDROID_PHONE now!!!!! Auto changed device.json -> protocol=1
+    echo The protocol[8.9.71] just support ANDROID_PHONE now!!!!! Auto changed device.json - protocol=1
     lib\sed.exe -i "s/\"protocol\":6/\"protocol\":1/g" "device.json"
     
 )
