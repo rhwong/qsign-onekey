@@ -3,7 +3,10 @@
 
 # unidbg-fetch-qsign-onekey
 
-本项目使用1.1.7版本，由于当前go-cqhttp(1.1.0)暂未适配，请来[此repo下载](https://github.com/rhwong/go-cqhttp-dev/releases/tag/v1.1.1-dev)非官方编译版本。如需旧版请移步release
+
+本项目使用qsign1.1.9版本，整合了开发版本的go-cqhttp，来源[d85d697](https://github.com/Mrs4s/go-cqhttp/actions/runs/5947215015)
+
+由于当前正式版本go-cqhttp(1.1.0)暂未适配新版qsign，如需旧版请移步release
 
 
 用于一键在Windows下部署[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)<br>
@@ -12,7 +15,9 @@
 <img src="https://img.shields.io/github/stars/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/github/license/rhwong/unidbg-fetch-qsign-onekey">
 <img src="https://img.shields.io/github/downloads/rhwong/unidbg-fetch-qsign-onekey/total">
 
-注意：本一键包推荐使用于Windows Server 2016 ~ 2022(21H2)
+
+注意：本一键包推荐使用于Windows Server 2016 +
+
 
 <img src="https://img.shields.io/badge/Windows-x64-red?style=flat-square&logo=Windows"> <img src="https://img.shields.io/badge/Windows-x86-red?style=flat-square&logo=Windows"> 
 
@@ -21,17 +26,13 @@
 
 ## ✨安装说明
 
-请直接点击 `Code - Download ZIP` 下载本项目，(当前release里是用于正式版本go-cqhttp的旧版本qsign)
-
-请将本项目和 `go-cqhttp` 放在同一级目录，这时脚本会自动读取 `config.yml` 文件中的部分参数。
-
-如果你需要对接其他登录端，可以直接解压缩到任意不包含中文和空格的路径中。
+请直接点击 `Code - Download ZIP` 下载本项目，直接解压缩到任意不包含中文和空格的路径中。
 
 已知问题：
 
 对于最新的11内核的Windows Server版本，出现了严重兼容性问题，
 
-具体表现为对接go-cqhttp时出现各种报错，原因未知。（并非是本脚本问题）
+具体表现为对接go-cqhttp时出现各种报错，原因未知。
 
 建议购买云服务器时不要选择Windows Server 2022
 
@@ -39,19 +40,16 @@
 
 ### 如何使用go-cqhttp联动运行
 
-1. 首先，运行 `go-cqhttp.bat`，按照提示生成 `config.yml` 。(👈如果放在同一个目录下运行，独立运行略过此步骤）
+1. 首先，运行 `go-cqhttp.bat`，按照提示生成 `config.yml` 。
 
 2. 双击 `Start_Qsign.bat` 启动qsign，按照提示依次键入 `txlib_version` 参数、设定`host`、`port`、`key`的值。 (👈如果不知道这些是干什么的，请直接依次按下Enter）
 
-3. 在启动完成后，qsign会告诉您当前运行api的地址，如果您没设定过host和key，那么默认是 `http://127.0.0.1:13579`。key已经在开始时设定过，如果您没设定，那么默认是 `1145141919810`。请将这两个参数填写到需要设定账号的签名服务器的地方。
+3. 在启动完成后，qsign会告诉您当前运行api的地址，如果您没设定过host和key，那么默认是 `http://127.0.0.1:13579`。key已经在开始时设定过，如果您没设定，那么默认是 `1145141919810`。(👈这些东西会自动写入到 `config.yml` ）
 
 4. 如果脚本检测到 `config.yml` 尚未设定账号和密码，那么会提示你输入账号(Account uin)和密码(password)，输入后会同步进 `config.yml` 。
 
 5. 如果日后需要修改 `txlib_version` 的版本，您可以删除文件夹根目录下的 `txlib_version.json` 来重新进入设定流程，也可以对此文件进行修改。
 
-### 如何独立运行
-
-参考上方，略过部分go-cqhttp相关步骤。
 
 ## 🌏分享您的Qsign API
 
@@ -125,6 +123,36 @@ support:txlib_8.9.58
 
 - 🎉另外祝我生日快乐~🥰🎂
 
+#### 📅2023-08-04
+
+更新 `go-cqhttp` 至 `3b99a82`
+
+#### 📅2023-08-14
+
+更新 1.1.7 分支的 `go-cqhttp` 至 `7346b61`
+
+##### Create branch 1.1.7b2 
+
+- support:txlib 8.9.73
+
+- update go-cqhttp -> [fd71785](https://github.com/1umine/go-cqhttp/actions/runs/5841440190)
+
+##### Feat!🎉
+
+支持自动同步协议文件
+
+当您选择了`txlib_version`版本时，自动同步协议文件至`go-cqhttp`的`data/versions`文件夹中，以防止签名服务器协议与客户端不同步。
+
+#### 📅2023-08-26
+
+##### Create branch 1.1.9 
+
+- support:txlib 8.9.71/3.5.1(TIM)/3.5.2(TIM)
+
+- update go-cqhttp -> [d85d697](https://github.com/Mrs4s/go-cqhttp/actions/runs/5947215015)
+
+跟随上游更新了TIM相关协议支持，8.9.71没偷到PAD的protocol文件，所以只能用PHONE，所以请注意在device.json里切换协议。
+
 ## ✨免责声明
 
 - 本仓库所有关于qsign签名服务的二进制文件均来自于[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)
@@ -132,3 +160,5 @@ support:txlib_8.9.58
 - 本仓库所使用的关于go-cqhttp与qsign版本不适配期间所代用的非官方版本go-cqhttp，均来自于自己或其他人的action/release，并且会注明来源。
 
 - 本仓库所有二进制文件您都可以根据SHA1校验其与官方仓库的二进制文件的一致性，本人现在及将来均不会对此仓库所有分支的二进制文件所有(可能发生的)安全问题负责。
+
+

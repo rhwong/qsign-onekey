@@ -6,6 +6,7 @@
   "key": "114514",
   "auto_register": false,
   "protocol": {
+    "package_name": "com.tencent.mobileqq",
     "qua": "V1_AND_SQ_8.9.58_4106_YYB_D",
     "version": "8.9.58",
     "code": "4106"
