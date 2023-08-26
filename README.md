@@ -50,6 +50,11 @@
 
 5. 如果日后需要修改 `txlib_version` 的版本，您可以删除文件夹根目录下的 `txlib_version.json` 来重新进入设定流程，也可以对此文件进行修改。
 
+### 不对接go-cqhttp？
+
+删除 `go-cqhttp.bat`及 `go-cqhttp_windows_386.exe`
+
+然后继续操作上面的步骤2
 
 ## 🌏分享您的Qsign API
 
