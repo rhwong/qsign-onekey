@@ -3,7 +3,11 @@
 
 # unidbg-fetch-qsign-onekey
 
-本项目使用1.1.9版本，整合了开发版本的go-cqhttp，来源[d85d697](https://github.com/Mrs4s/go-cqhttp/actions/runs/5947215015)
+
+本项目使用qsign1.1.9版本，整合了开发版本的go-cqhttp，来源[d85d697](https://github.com/Mrs4s/go-cqhttp/actions/runs/5947215015)
+
+由于当前正式版本go-cqhttp(1.1.0)暂未适配新版qsign，如需旧版请移步release
+
 
 用于一键在Windows下部署[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)<br>
 
@@ -11,13 +15,14 @@
 <img src="https://img.shields.io/github/stars/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/github/license/rhwong/unidbg-fetch-qsign-onekey">
 <img src="https://img.shields.io/github/downloads/rhwong/unidbg-fetch-qsign-onekey/total">
 
+
 注意：本一键包推荐使用于Windows Server 2016 +
+
 
 <img src="https://img.shields.io/badge/Windows-x64-red?style=flat-square&logo=Windows"> <img src="https://img.shields.io/badge/Windows-x86-red?style=flat-square&logo=Windows"> 
 
 </div>
 <!-- projectInfo end -->
-
 
 ## ✨安装说明
 
