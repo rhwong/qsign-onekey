@@ -4,7 +4,7 @@
 # unidbg-fetch-qsign-onekey
 
 
-本项目使用qsign1.1.9版本，整合了开发版本的go-cqhttp，来源[d85d697](https://github.com/Mrs4s/go-cqhttp/actions/runs/5947215015)
+本项目使用qsign1.1.9版本，整合了开发版本的go-cqhttp，来源[f16d72f](https://github.com/Mrs4s/go-cqhttp/actions/runs/6036458147)
 
 由于当前正式版本go-cqhttp(1.1.0)暂未适配新版qsign，如需旧版请移步release
 
