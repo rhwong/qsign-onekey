@@ -1,5 +1,5 @@
 @echo off
-title go-cqhttp-dev-d85d697
+title go-cqhttp-dev
 setlocal enabledelayedexpansion
 if not exist "txlib_version.json" (
 	REM txlib_version_config_file does not exist.
@@ -12,4 +12,4 @@ if "!txlib_version!"=="8.9.71" (
     
 )
 
-go-cqhttp_windows_386.exe -faststart
+go-cqhttp.exe -faststart
