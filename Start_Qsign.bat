@@ -1,8 +1,8 @@
 @echo off
-title Qsign-Onekey by rhwong v1.1.9
+title Qsign-Onekey by rhwong v1.1.9-fix1
 setlocal enabledelayedexpansion
 set JAVA_HOME=.\jre
-set "ver=1.1.9"
+set "ver=1.1.9-fix1"
 set "library=txlib/"
 set "config_file=config.yml"
 set "account=1233456"
@@ -130,9 +130,9 @@ if %fileExists%==1 (
   if exist "%config_file%" (
     lib\sed.exe -i "/# sign-server:/d" "%config_file%"
     if "!host!"=="0.0.0.0" (
-      lib\sed.exe -i "s/sign-server:.*/sign-server: 'http:\/\/localhost:!port!'/g; s/key:.*/key: '!key!'/g" "%config_file%"
+      lib\sed.exe -i "s/url:.*/url: 'http:\/\/localhost:!port!'/g; s/key:.*/key: '!key!'/g" "%config_file%"
       ) else ( 
-      lib\sed.exe -i "s/sign-server:.*/sign-server: 'http:\/\/!host!:!port!'/g; s/key:.*/key: '!key!'/g" "%config_file%"
+      lib\sed.exe -i "s/url:.*/url: 'http:\/\/!host!:!port!'/g; s/key:.*/key: '!key!'/g" "%config_file%"
       )
   ) else (
     echo Can't find [config.yml]. If you forgot to generate it, please run [go-cqhttp.bat]
