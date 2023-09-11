@@ -160,6 +160,14 @@ support:txlib_8.9.58
 
 跟随上游更新了TIM相关协议支持，8.9.71没偷到PAD的protocol文件，所以只能用PHONE，所以请注意在device.json里切换协议。
 
+#### 📅2023-09-11
+
+- update go-cqhttp -> [f16d72f](https://github.com/Mrs4s/go-cqhttp/actions/runs/6036458147)
+
+修复了对于最新版本go-cqhttp配置文件中关于签名服务器部分的破坏性更新的支持。
+
+脚本只会替换当前配置文件中第一个签名服务器，若需要使用备用签名服务器请自行修改配置文件。
+
 ## ✨免责声明
 
 - 本仓库所有关于qsign签名服务的二进制文件均来自于[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)

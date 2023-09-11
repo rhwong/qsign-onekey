@@ -128,11 +128,11 @@ for %%i in (%targetPattern%) do (
 
 if %fileExists%==1 (
   if exist "%config_file%" (
-    lib\sed.exe -i "/# sign-server:/d" "%config_file%"
+    lib\sed.exe -i "s/url: 'http:\/\/127.0.0.1:8080'/Example-sign-server/; s/url: 'https:\/\/signserver.example.com'/Example-sign-server/" "%config_file%"
     if "!host!"=="0.0.0.0" (
-      lib\sed.exe -i "s/url:.*/url: 'http:\/\/localhost:!port!'/g; s/key:.*/key: '!key!'/g" "%config_file%"
+      lib\sed.exe -i "0,/url: '.*'/s/url: '.*'/url: 'http:\/\/localhost:!port!'/; 0,/key: '.*'/s/key: '.*'/key: '!key!'/" "%config_file%"
       ) else ( 
-      lib\sed.exe -i "s/url:.*/url: 'http:\/\/!host!:!port!'/g; s/key:.*/key: '!key!'/g" "%config_file%"
+      lib\sed.exe -i "0,/url: '.*'/s/url: '.*'/url: 'http:\/\/!host!:!port!'/; 0,/key: '.*'/s/key: '.*'/key: '!key!'/" "%config_file%"
       )
   ) else (
     echo Can't find [config.yml]. If you forgot to generate it, please run [go-cqhttp.bat]
