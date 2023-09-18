@@ -28,9 +28,9 @@ if not exist "txlib_version.json" (
   echo Please enter an option to save. 
   echo If you press enter directly, save the default values.
   echo -------------------------------------------------------------------------------------------------
-  set /p "txlib_version=txlib_version(optional:3.5.1/3.5.2/8.9.58/8.9.63(default)/8.9.68/8.9.70/8.9.71/8.9.73): "
+  set /p "txlib_version=txlib_version(optional:3.5.1/3.5.2/8.9.58/8.9.63/8.9.68/8.9.70(default)/8.9.71/8.9.73): "
        if "!txlib_version!"=="" (
-	   set "txlib_version=8.9.63"
+	   set "txlib_version=8.9.70"
        )  
   set "json_file=%library%!txlib_version!/config.json"
   
