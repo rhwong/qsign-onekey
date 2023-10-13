@@ -4,17 +4,17 @@
 # unidbg-fetch-qsign-onekey
 
 
-本项目使用qsign1.2.1版本，整合了开发版本的go-cqhttp，来源[v1.2.0](https://github.com/Mrs4s/go-cqhttp/releases/tag/v1.2.0)
+本项目使用qsign1.2.1(20230917)版本，整合了开发版本的go-cqhttp，来源[v1.2.0](https://github.com/Mrs4s/go-cqhttp/releases/tag/v1.2.0)
 
 用于一键在Windows下部署[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)<br>
 
 <img src="https://img.shields.io/github/issues/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/github/forks/rhwong/unidbg-fetch-qsign-onekey"> 
-<img src="https://img.shields.io/github/stars/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/badge/Version-1.2.1-blue">
+<img src="https://img.shields.io/github/stars/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/badge/Version-1.2.1-revert1-blue">
 <img src="https://img.shields.io/github/downloads/rhwong/unidbg-fetch-qsign-onekey/total">
 
 
 注意：本一键包推荐使用于Windows Server 2016 +
-
+## 非必要请勿使用8.9.73以上的签名！
 
 <img src="https://img.shields.io/badge/Windows-x64-red?style=flat-square&logo=Windows"> <img src="https://img.shields.io/badge/Windows-x86-red?style=flat-square&logo=Windows"> 
 
@@ -177,6 +177,13 @@ support:txlib_8.9.58
 
 新增 `8.9.80` 协议用于救砖，若您可以正常使用 `8.9.70` 版本，则切勿升级至 `8.9.80`
 
+#### 📅2023-10-14
+
+- revert unidbg-fetch-qsign -> v1.2.1(20230917release)
+
+由于最新的actions有时会出现无限刷屏的情况，恢复为旧版的1.2.1（曾在2023-09-17出现在release中）
+
+*移除Qsign_Monitor
 
 ## ✨免责声明
 
