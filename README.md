@@ -4,15 +4,12 @@
 # unidbg-fetch-qsign-onekey
 
 
-本项目使用qsign1.1.9版本，整合了开发版本的go-cqhttp，来源[f16d72f](https://github.com/Mrs4s/go-cqhttp/actions/runs/6036458147)
-
-由于当前正式版本go-cqhttp(1.1.0)暂未适配新版qsign，如需旧版请移步release
-
+本项目使用qsign1.2.1版本，整合了开发版本的go-cqhttp，来源[v1.2.0](https://github.com/Mrs4s/go-cqhttp/releases/tag/v1.2.0)
 
 用于一键在Windows下部署[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)<br>
 
 <img src="https://img.shields.io/github/issues/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/github/forks/rhwong/unidbg-fetch-qsign-onekey"> 
-<img src="https://img.shields.io/github/stars/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/badge/Version-1.1.9fix1-blue">
+<img src="https://img.shields.io/github/stars/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/badge/Version-1.2.1-blue">
 <img src="https://img.shields.io/github/downloads/rhwong/unidbg-fetch-qsign-onekey/total">
 
 
@@ -171,6 +168,15 @@ support:txlib_8.9.58
 修复了对于最新版本go-cqhttp配置文件中关于签名服务器部分的破坏性更新的支持。
 
 脚本只会替换当前配置文件中第一个签名服务器，若需要使用备用签名服务器请自行修改配置文件。
+
+#### 📅2023-10-13
+
+- update go-cqhttp -> [v1.2.0](https://github.com/Mrs4s/go-cqhttp/releases/tag/v1.2.0)
+
+更新至最新正式版本go-cqhttp
+
+新增 `8.9.80` 协议用于救砖，若您可以正常使用 `8.9.70` 版本，则切勿升级至 `8.9.80`
+
 
 ## ✨免责声明
 

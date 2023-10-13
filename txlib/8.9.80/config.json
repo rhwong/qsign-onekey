@@ -1,0 +1,1 @@
+{ "server": { "host": "127.0.0.1", "port": 13579 }, "share_token": true, "count": 10, "key": "1145141919810", "auto_register": true, "protocol": { "package_name": "com.tencent.mobileqq", "qua":"V1_AND_SQ_8.9.80_4614_YYB_D","version":"8.9.80","code":"4614"}, "unidbg": { "dynarmic": false, "unicorn": true, "kvm": false, "debug": false } } 
