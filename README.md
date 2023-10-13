@@ -14,7 +14,7 @@
 
 
 注意：本一键包推荐使用于Windows Server 2016 +
-
+## 非必要请勿使用73以上的签名！
 
 <img src="https://img.shields.io/badge/Windows-x64-red?style=flat-square&logo=Windows"> <img src="https://img.shields.io/badge/Windows-x86-red?style=flat-square&logo=Windows"> 
 
