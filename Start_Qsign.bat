@@ -1,8 +1,8 @@
 @echo off
-title Qsign-Onekey by rhwong v1.2.1
+title Qsign-Onekey by rhwong v1.1.9-fix2
 setlocal enabledelayedexpansion
 set JAVA_HOME=.\jre
-set "ver=1.2.1"
+set "ver=1.1.9-fix2"
 set "library=txlib/"
 set "config_file=config.yml"
 set "account=1233456"
@@ -48,47 +48,47 @@ if not exist "txlib_version.json" (
       )
 
   if "!txlib_version!"=="3.5.1" (
-    echo { "server": { "host": "!host!", "port": !port! }, "share_token": true, "count": 10, "key": "!key!", "auto_register": true, "protocol": { "package_name": "com.tencent.tim", "qua": "V1_AND_SQ_8.3.9_351_TIM_D", "version": "3.5.1", "code": "1298" }, "unidbg": { "dynarmic": false, "unicorn": true, "kvm": false, "debug": false } } > "!json_file!"
+    echo { "server": { "host": "!host!", "port": !port! }, "share_token": false, "count": 5, "key": "!key!", "auto_register": true, "protocol": { "package_name": "com.tencent.tim", "qua": "V1_AND_SQ_8.3.9_351_TIM_D", "version": "3.5.1", "code": "1298" }, "unidbg": { "dynarmic": false, "unicorn": true, "kvm": false, "debug": false } } > "!json_file!"
 	  echo {"txlib_version": "3.5.1"} > txlib_version.json
 	)
 
   if "!txlib_version!"=="3.5.2" (
-    echo { "server": { "host": "!host!", "port": !port! }, "share_token": true, "count": 10, "key": "!key!", "auto_register": true, "protocol": { "package_name": "com.tencent.tim", "qua": "V1_AND_SQ_8.3.9_352_TIM_D", "version": "3.5.2", "code": "1308" }, "unidbg": { "dynarmic": false, "unicorn": true, "kvm": false, "debug": false } } > "!json_file!"
+    echo { "server": { "host": "!host!", "port": !port! }, "share_token": false, "count": 5, "key": "!key!", "auto_register": true, "protocol": { "package_name": "com.tencent.tim", "qua": "V1_AND_SQ_8.3.9_352_TIM_D", "version": "3.5.2", "code": "1308" }, "unidbg": { "dynarmic": false, "unicorn": true, "kvm": false, "debug": false } } > "!json_file!"
 	  echo {"txlib_version": "3.5.2"} > txlib_version.json
 	)
 
   if "!txlib_version!"=="8.9.58" (
-    echo { "server": { "host": "!host!", "port": !port! }, "share_token": true, "count": 10, "key": "!key!", "auto_register": true, "protocol": { "package_name": "com.tencent.mobileqq", "qua": "V1_AND_SQ_8.9.58_4106_YYB_D", "version": "8.9.58", "code": "4106" }, "unidbg": { "dynarmic": false, "unicorn": true, "kvm": false, "debug": false } } > "!json_file!"
+    echo { "server": { "host": "!host!", "port": !port! }, "share_token": false, "count": 5, "key": "!key!", "auto_register": true, "protocol": { "package_name": "com.tencent.mobileqq", "qua": "V1_AND_SQ_8.9.58_4106_YYB_D", "version": "8.9.58", "code": "4106" }, "unidbg": { "dynarmic": false, "unicorn": true, "kvm": false, "debug": false } } > "!json_file!"
 	  echo {"txlib_version": "8.9.58"} > txlib_version.json
 	)
 
   if "!txlib_version!"=="8.9.63" (
-    echo { "server": { "host": "!host!", "port": !port! }, "share_token": true, "count": 10, "key": "!key!", "auto_register": true, "protocol": { "package_name": "com.tencent.mobileqq", "qua": "V1_AND_SQ_8.9.63_4194_YYB_D", "version": "8.9.63", "code": "4194" }, "unidbg": { "dynarmic": false, "unicorn": true, "kvm": false, "debug": false } } > "!json_file!"
+    echo { "server": { "host": "!host!", "port": !port! }, "share_token": false, "count": 5, "key": "!key!", "auto_register": true, "protocol": { "package_name": "com.tencent.mobileqq", "qua": "V1_AND_SQ_8.9.63_4194_YYB_D", "version": "8.9.63", "code": "4194" }, "unidbg": { "dynarmic": false, "unicorn": true, "kvm": false, "debug": false } } > "!json_file!"
 	  echo {"txlib_version": "8.9.63"} > txlib_version.json
 	)
 
   if "!txlib_version!"=="8.9.68" (
-	  echo { "server": { "host": "!host!", "port": !port! }, "share_token": true, "count": 10, "key": "!key!", "auto_register": true, "protocol": { "package_name": "com.tencent.mobileqq", "qua": "V1_AND_SQ_8.9.68_4264_YYB_D", "version": "8.9.68", "code": "4264" }, "unidbg": { "dynarmic": false, "unicorn": true, "kvm": false, "debug": false } } > "!json_file!"
+	echo { "server": { "host": "!host!", "port": !port! }, "share_token": false, "count": 5, "key": "!key!", "auto_register": true, "protocol": { "package_name": "com.tencent.mobileqq", "qua": "V1_AND_SQ_8.9.68_4264_YYB_D", "version": "8.9.68", "code": "4264" }, "unidbg": { "dynarmic": false, "unicorn": true, "kvm": false, "debug": false } } > "!json_file!"
 	  echo {"txlib_version": "8.9.68"} > txlib_version.json
     )
 	
   if "!txlib_version!"=="8.9.70" (
-    echo { "server": { "host": "!host!", "port": !port! }, "share_token": true, "count": 10, "key": "!key!", "auto_register": true, "protocol": { "package_name": "com.tencent.mobileqq", "qua": "V1_AND_SQ_8.9.70_4330_YYB_D", "version": "8.9.70", "code": "4330" }, "unidbg": { "dynarmic": false, "unicorn": true, "kvm": false, "debug": false } } > "!json_file!"
+    echo { "server": { "host": "!host!", "port": !port! }, "share_token": false, "count": 5, "key": "!key!", "auto_register": true, "protocol": { "package_name": "com.tencent.mobileqq", "qua": "V1_AND_SQ_8.9.70_4330_YYB_D", "version": "8.9.70", "code": "4330" }, "unidbg": { "dynarmic": false, "unicorn": true, "kvm": false, "debug": false } } > "!json_file!"
 	  echo {"txlib_version": "8.9.70"} > txlib_version.json
 	)
 	
   if "!txlib_version!"=="8.9.71" (
-    echo { "server": { "host": "!host!", "port": !port! }, "share_token": true, "count": 10, "key": "!key!", "auto_register": true, "protocol": { "package_name": "com.tencent.mobileqq", "qua": "V1_AND_SQ_8.9.71_4332_YYB_D", "version": "8.9.71", "code": "4332" }, "unidbg": { "dynarmic": false, "unicorn": true, "kvm": false, "debug": false } } > "!json_file!"
+    echo { "server": { "host": "!host!", "port": !port! }, "share_token": false, "count": 5, "key": "!key!", "auto_register": true, "protocol": { "package_name": "com.tencent.mobileqq", "qua": "V1_AND_SQ_8.9.71_4332_YYB_D", "version": "8.9.71", "code": "4332" }, "unidbg": { "dynarmic": false, "unicorn": true, "kvm": false, "debug": false } } > "!json_file!"
 	  echo {"txlib_version": "8.9.71"} > txlib_version.json
 	)
 
   if "!txlib_version!"=="8.9.73" (
-    echo { "server": { "host": "!host!", "port": !port! }, "share_token": true, "count": 10, "key": "!key!", "auto_register": true, "protocol": { "package_name": "com.tencent.mobileqq", "qua": "V1_AND_SQ_8.9.73_4416_YYB_D", "version": "8.9.73", "code": "4416" }, "unidbg": { "dynarmic": false, "unicorn": true, "kvm": false, "debug": false } } > "!json_file!"
+    echo { "server": { "host": "!host!", "port": !port! }, "share_token": false, "count": 5, "key": "!key!", "auto_register": true, "protocol": { "package_name": "com.tencent.mobileqq", "qua": "V1_AND_SQ_8.9.73_4416_YYB_D", "version": "8.9.73", "code": "4416" }, "unidbg": { "dynarmic": false, "unicorn": true, "kvm": false, "debug": false } } > "!json_file!"
 	  echo {"txlib_version": "8.9.73"} > txlib_version.json
 	)
 
   if "!txlib_version!"=="8.9.80" (
-    echo { "server": { "host": "!host!", "port": !port! }, "share_token": true, "count": 10, "key": "!key!", "auto_register": true, "protocol": { "package_name": "com.tencent.mobileqq", "qua": "V1_AND_SQ_8.9.80_4614_YYB_D", "version": "8.9.80", "code": "4614" }, "unidbg": { "dynarmic": false, "unicorn": true, "kvm": false, "debug": false } } > "!json_file!"
+    echo { "server": { "host": "!host!", "port": !port! }, "share_token": false, "count": 5, "key": "!key!", "auto_register": true, "protocol": { "package_name": "com.tencent.mobileqq", "qua": "V1_AND_SQ_8.9.80_4614_YYB_D", "version": "8.9.80", "code": "4614" }, "unidbg": { "dynarmic": false, "unicorn": true, "kvm": false, "debug": false } } > "!json_file!"
 	  echo {"txlib_version": "8.9.80"} > txlib_version.json
 	)
 

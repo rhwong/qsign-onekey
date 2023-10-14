@@ -4,12 +4,12 @@
 # unidbg-fetch-qsign-onekey
 
 
-本项目使用qsign1.2.1(20230917)版本，整合了开发版本的go-cqhttp，来源[v1.2.0](https://github.com/Mrs4s/go-cqhttp/releases/tag/v1.2.0)
+本项目使用qsign1.1.9版本，整合了开发版本的go-cqhttp，来源[v1.2.0](https://github.com/Mrs4s/go-cqhttp/releases/tag/v1.2.0)
 
 用于一键在Windows下部署[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)<br>
 
 <img src="https://img.shields.io/github/issues/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/github/forks/rhwong/unidbg-fetch-qsign-onekey"> 
-<img src="https://img.shields.io/github/stars/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/badge/Version-1.2.1revert1-blue">
+<img src="https://img.shields.io/github/stars/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/badge/Version-1.1.9fix2-blue">
 <img src="https://img.shields.io/github/downloads/rhwong/unidbg-fetch-qsign-onekey/total">
 
 
@@ -179,9 +179,9 @@ support:txlib_8.9.58
 
 #### 📅2023-10-14
 
-- revert unidbg-fetch-qsign -> v1.2.1(20230917release)
+- revert unidbg-fetch-qsign -> v1.1.9
 
-由于最新的actions有时会出现无限刷屏的情况，恢复为旧版的1.2.1（曾在2023-09-17出现在release中）
+由于最新的actions有时会出现无限刷屏的情况，恢复为旧版的1.1.9
 
 *移除Qsign_Monitor
 
