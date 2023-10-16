@@ -193,3 +193,8 @@ support:txlib_8.9.58
 
 - 本仓库所有二进制文件您都可以根据SHA1校验其与官方仓库的二进制文件的一致性，本人现在及将来均不会对此仓库所有分支的二进制文件所有(可能发生的)安全问题负责。
 
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/rhwong/unidbg-fetch-qsign-onekey.svg)](https://starchart.cc/rhwong/unidbg-fetch-qsign-onekey)
+
