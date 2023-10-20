@@ -1,10 +1,10 @@
 <div align="center">
     <img alt="OOOK" src="https://olivos.onekey.ren/img/logo.png"/>
 
-# unidbg-fetch-qsign-onekey
+# qsign-onekey
 
 
-本项目用于一键启动[fuqiuluo/unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)
+本项目用于一键启动qsign
 
 请自行将qsign内容文件和go-cqhttp放到同级别文件夹，脚本会自行读取<br>
 
