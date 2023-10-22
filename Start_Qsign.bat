@@ -1,8 +1,8 @@
 @echo off
-title Qsign-Onekey by rhwong shia v1.1.9-bitterest (2023-10-21)
+title Qsign-Onekey by rhwong shia v1.1.9-bitterest (2023-10-22)
 setlocal enabledelayedexpansion
 set JAVA_HOME=.\jre
-set "ver=1.1.9-bitterest-2023-10-21"
+set "ver=1.1.9-bitterest-2023-10-22"
 set "library=txlib/"
 set "config_file=config.yml"
 set "account=1233456"
