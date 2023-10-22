@@ -101,10 +101,8 @@ if %fileExists%==1 (
       md data\versions
       if "!txlib_version!" neq "3.5.1" (
         if "!txlib_version!" neq "3.5.2" (
-          if "!txlib_version!" neq "8.9.71" (
       copy txlib\!txlib_version!\android_pad.json data\versions\6.json
       copy txlib\!txlib_version!\android_phone.json data\versions\1.json
-          )
         )
       )
 ) else (
