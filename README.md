@@ -37,6 +37,8 @@
          └─8.9.85
          └─...
      └─README.md
+     └─go-cqhttp.bat
+     └─go-cqhttp.exe
      └─Start_Qsign.bat
 ```
 
