@@ -24,6 +24,18 @@
 
 然后将qsign内容文件和go-cqhttp放到同级别文件夹，脚本会自行读取。
 
+文件目录结构如下
+
+```
+└─ qsign-onekey-1.1.9-bitterest
+     └─bin
+     └─jre
+     └─lib
+     └─txlib
+     └─README.md
+     └─Start_Qsign.bat
+```
+
 ## ✨使用方法
 
 ### 如何使用go-cqhttp联动运行
