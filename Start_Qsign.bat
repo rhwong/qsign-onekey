@@ -1,12 +1,14 @@
 @echo off
-title Qsign-Onekey by rhwong shia v1.1.9-bitterest (2023-10-22)
+title Qsign-Onekey v1.2.3.1-Deamon
 setlocal enabledelayedexpansion
 set JAVA_HOME=.\jre
-set "ver=1.1.9-bitterest-2023-10-22"
+set "ver=1.2.3.1-2023-11-06"
 set "library=txlib/"
 set "config_file=config.yml"
 set "account=1233456"
 set "password="
+set "author=rhwong shia kagangtuya-star"
+
 if not exist "txlib_version.json" (
 	REM txlib_version_config_file does not exist.
 ) else ( 
@@ -24,14 +26,14 @@ echo ---------------------------------------------------------------------------
                                                                                               
 if not exist "txlib_version.json" (
   echo -------------------------------------------------------------------------------------------------
-  echo unidbg-fetch-qsign-onekey Ver.%ver%
+  echo unidbg-fetch-qsign-onekey Ver.%ver% by %author%
   echo txlib_version_config_file does not exist.
   echo Please enter an option to save. 
   echo If you press enter directly, save the default values.
   echo -------------------------------------------------------------------------------------------------
-  set /p "txlib_version=txlib_version(default:8.9.80): "
+  set /p "txlib_version=txlib_version(default:8.9.88): "
        if "!txlib_version!"=="" (
-	   set "txlib_version=8.9.80"
+	   set "txlib_version=8.9.88"
        )  
   set "json_file=%library%!txlib_version!/config.json"
   
@@ -70,7 +72,7 @@ if not exist "txlib\!txlib_version!\" (
   for /F "delims=" %%D in ('lib\jq.exe -r ".txlib_version" txlib_version.json') do set "txlib_version=%%D"
   set "json_file=%library%!txlib_version!/config.json"
   echo -------------------------------------------------------------------------------------------------
-  echo unidbg-fetch-qsign-onekey Ver.%ver%
+  echo unidbg-fetch-qsign-onekey Ver.%ver% by %author%
   echo txlib_Version is %txlib_version%
   echo If you want to change txlib_version , please delete [txlib_version.json]!
   echo -------------------------------------------------------------------------------------------------
@@ -101,8 +103,12 @@ if %fileExists%==1 (
       md data\versions
       if "!txlib_version!" neq "3.5.1" (
         if "!txlib_version!" neq "3.5.2" (
+			if "!txlib_version!" neq "3.5.5" (
+				if "!txlib_version!" neq "5.8.2" (
       copy txlib\!txlib_version!\android_pad.json data\versions\6.json
       copy txlib\!txlib_version!\android_phone.json data\versions\1.json
+				)
+			)
         )
       )
 ) else (
@@ -144,7 +150,7 @@ if %errorlevel% equ 0 (
       tasklist /fi "PID eq !pid!" | findstr /i "!pid!" >nul
         if %errorlevel% equ 0 (
           askkill /F /PID !pid!))
-    start "Qsign-Onekey" cmd /c "bin\unidbg-fetch-qsign --basePath=%library%%txlib_version%"
+    start "Qsign-Onekey v1.2.3.1-Core" cmd /c "bin\unidbg-fetch-qsign --basePath=%library%%txlib_version%"
     timeout /t 15 /nobreak >nul
     for /f "tokens=5" %%A in ('netstat -ano ^| findstr ":!port!.*LISTENING"') do (
       set "pid=%%A")
