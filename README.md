@@ -59,7 +59,7 @@
 
 6. 切勿关闭启动完成后的两个窗口，`Qsign Deamon`窗口用于监测`Qsign Core`是否存活，若探活失败将按照pid结束进程并重启Core。
 
-7. 如果日后需要修改 `txlib_version` 的版本，您可以删除文件夹根目录下的 `txlib_version.json` 来重新进入设定流程，也可以对此文件进行修改。
+7. 如果日后需要修改 `txlib_version` 的版本，您可以删除文件夹根目录下的 `txlib_version.json` 来重新进入设定流程，不建议对此文件进行修改。
 
 
 ## ✨免责声明
