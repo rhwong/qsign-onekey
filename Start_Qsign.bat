@@ -141,9 +141,9 @@ if %errorlevel% equ 0 (
 ) else (
     echo Qsign API is not running, Restarting...
     if defined pid (
-      tasklist /fi "PID eq %pid%" | findstr /i "%pid%" >nul
+      tasklist /fi "PID eq !pid!" | findstr /i "!pid!" >nul
         if %errorlevel% equ 0 (
-          askkill /F /PID %pid%))
+          askkill /F /PID !pid!))
     start "Qsign-Onekey" cmd /c "bin\unidbg-fetch-qsign --basePath=%library%%txlib_version%"
     timeout /t 15 /nobreak >nul
     for /f "tokens=5" %%A in ('netstat -ano ^| findstr ":!port!.*LISTENING"') do (
