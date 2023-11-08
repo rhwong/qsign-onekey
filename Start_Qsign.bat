@@ -138,8 +138,18 @@ echo TXlib_version:%txlib_version%
 echo -------------------------------------------------------------------------------------------------
 timeout /t 3 > nul
 
+where curl >nul 2>nul
+echo Check if the curl command is installed in the environment variables...
+if %errorlevel% equ 0 (
+  echo The curl command is detected, use the installed curl
+  set "curl_command=curl"
+) else (
+  echo The curl command is not detected, use the "curl.exe" from the lib folder.This precompiled executable works only on x86 architecture systems.
+  set "curl_command=lib\curl.exe"
+)
+
 :loop
-lib\curl.exe -I http://!host!:!port!/register?uin=12345678 >nul 2>nul
+%curl_command% -I http://!host!:!port!/register?uin=12345678 >nul 2>nul
 if %errorlevel% equ 0 (
     echo Qsign API is running.
     timeout /t 30 /nobreak >nul
