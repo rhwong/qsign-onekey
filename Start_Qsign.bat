@@ -139,7 +139,7 @@ echo ---------------------------------------------------------------------------
 timeout /t 3 > nul
 
 :loop
-curl -I http://!host!:!port!/register?uin=12345678 >nul 2>nul
+lib\curl.exe -I http://!host!:!port!/register?uin=12345678 >nul 2>nul
 if %errorlevel% equ 0 (
     echo Qsign API is running.
     timeout /t 30 /nobreak >nul
