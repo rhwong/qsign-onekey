@@ -2,7 +2,7 @@
 title Qsign-Onekey Deamon
 setlocal enabledelayedexpansion
 set JAVA_HOME=.\jre
-set "ver=2023-11-06"
+set "ver=2023-12-19"
 set "library=txlib/"
 set "config_file=config.yml"
 set "account=1233456"
