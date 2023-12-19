@@ -9,7 +9,7 @@
 请自行将qsign内容文件和go-cqhttp放到同级别文件夹，脚本会自行读取<br>
 
 <img src="https://img.shields.io/github/issues/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/github/forks/rhwong/unidbg-fetch-qsign-onekey"> 
-<img src="https://img.shields.io/github/stars/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/badge/Version-1.2.3.1-blue">
+<img src="https://img.shields.io/github/stars/rhwong/unidbg-fetch-qsign-onekey"> <img src="https://img.shields.io/badge/Version-1.1.9b6-blue">
 <img src="https://img.shields.io/github/downloads/rhwong/unidbg-fetch-qsign-onekey/total">
 
 
