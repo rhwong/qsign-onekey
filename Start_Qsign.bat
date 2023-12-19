@@ -149,7 +149,12 @@ if %errorlevel% equ 0 (
 )
 
 :loop
-%curl_command% -I http://!host!:!port!/register?uin=12345678 --connect-timeout 5 -m 5 >nul 2>nul
+if "!host!"=="0.0.0.0" (
+       set "core_host=localhost"
+      ) else ( 
+      set "core_host=!host!"
+      )
+%curl_command% -I http://!core_host!:!port!/register?uin=12345678 --connect-timeout 5 -m 5 >nul 2>nul
 if %errorlevel% equ 0 (
     echo Qsign API is running.
     timeout /t 30 /nobreak >nul
