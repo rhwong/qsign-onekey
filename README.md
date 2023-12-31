@@ -13,7 +13,7 @@
 <img src="https://img.shields.io/github/downloads/rhwong/unidbg-fetch-qsign-onekey/total">
 
 
-<img src="https://img.shields.io/badge/Windows-x64-red?style=flat-square&logo=Windows"> <img src="https://img.shields.io/badge/Windows-x86-red?style=flat-square&logo=Windows"> 
+<img src="https://img.shields.io/badge/Windows-x64-red?style=flat-square&logo=Windows">
 
 </div>
 <!-- projectInfo end -->
