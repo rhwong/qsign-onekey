@@ -161,7 +161,7 @@ if %errorlevel% equ 0 (
     timeout /t 30 /nobreak >nul
     goto loop
 ) else (
-    echo Qsign API 探活失败，正在结束进程并重新启动...
+    echo Qsign API 探活失败，正在结束进程并重新启动....
     if defined pid (
       tasklist /fi "PID eq !pid!" | findstr /i "!pid!" >nul
         if %errorlevel% equ 0 (
