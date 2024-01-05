@@ -1,5 +1,6 @@
 @echo off
-title Qsign-Onekey Deamon
+chcp 936 > NUL
+title Qsign-Onekey 守护进程
 setlocal enabledelayedexpansion
 set JAVA_HOME=.\jre
 set "ver=2024-01-05"
@@ -27,34 +28,34 @@ echo ---------------------------------------------------------------------------
 if not exist "txlib_version.json" (
   echo -------------------------------------------------------------------------------------------------
   echo unidbg-fetch-qsign-onekey Ver.%ver% by %author%
-  echo txlib_version_config_file does not exist.
-  echo Please enter an option to save. 
-  echo If you press enter directly, save the default values.
+  echo [txlib_version.json] 版本信息文件未找到。
+  echo 请输入要保存的选项,按Enter键确认。
+  echo 如果你直接按下Enter键，将会保存提示的默认参数。
   echo -------------------------------------------------------------------------------------------------
-  set /p "txlib_version=txlib_version(default:8.9.88): "
+  set /p "txlib_version=txlib版本(默认:8.9.88): "
        if "!txlib_version!"=="" (
 	   set "txlib_version=8.9.88"
        )  
   set "json_file=%library%!txlib_version!/config.json"
   
-  set /p "host=host(default:127.0.0.1): "
+  set /p "host=主机IP[HOST](默认:127.0.0.1): "
       if "!host!"=="" (
       set "host=127.0.0.1"
       )
-  set /p "port=port(default:13579): "
+  set /p "port=端口[PORT](默认:13579): "
       if "!port!"=="" (
       set "port=13579"
       )
-  set /p "key=key(default:1145141919810): "
+  set /p "key=密钥[KEY](默认:1145141919810): "
       if "!key!"=="" (
       set "key=1145141919810"
       )
 
 if not exist "txlib\!txlib_version!\" (
   echo -------------------------------------------------------------------------------------------------
-      echo Warning: Wrong txlib_ Version. 
-      echo Please check the "txlib" folder!
-      echo The following are supported txlib versions:
+      echo 警告！错误的 txlib 版本号。
+      echo 请检查 "txlib" 文件夹!
+      echo 以下是您目前已经安装的 txlib 版本号:
       dir txlib /b /ad
   echo -------------------------------------------------------------------------------------------------
       timeout 10
@@ -73,8 +74,8 @@ if not exist "txlib\!txlib_version!\" (
   set "json_file=%library%!txlib_version!/config.json"
   echo -------------------------------------------------------------------------------------------------
   echo unidbg-fetch-qsign-onekey Ver.%ver% by %author%
-  echo txlib_Version is %txlib_version%
-  echo If you want to change txlib_version , please delete [txlib_version.json]!
+  echo txlib 版本号为 %txlib_version%
+  echo 如果你想要修改 txlib 版本号 , 请删除 [txlib_version.json] 文件!
   echo -------------------------------------------------------------------------------------------------
   for /F "delims=" %%A in ('lib\jq.exe -r ".server.host" %json_file%') do set "host=%%A"
   for /F "delims=" %%B in ('lib\jq.exe -r ".server.port" %json_file%') do set "port=%%B"
@@ -97,9 +98,9 @@ if %fileExists%==1 (
       lib\sed.exe -i "0,/url: '.*'/s/url: '.*'/url: 'http:\/\/!host!:!port!'/; 0,/key: '.*'/s/key: '.*'/key: '!key!'/" "%config_file%"
       )
   ) else (
-    echo Can't find [config.yml]. If you forgot to generate it, please run [go-cqhttp.bat]
+    echo 没找到go-cqhttp的配置文件 [config.yml]. 如果你忘了生成它，请运行 [go-cqhttp.bat] 
   )
-      echo Sync protocol version to go-cqhttp data folder.
+      echo 同步当前 txlib 版本协议文件至go-cqhttp的协议信息目录.
       md data\versions
       if "!txlib_version!" neq "3.5.1" (
         if "!txlib_version!" neq "3.5.2" (
@@ -112,39 +113,39 @@ if %fileExists%==1 (
         )
       )
 ) else (
-  echo Run separately from go-cqhttp?
-  echo Please manually synchronize the protocol version.
-  echo And enter the Qsign API ADDRESS and KEY to other client.
+  echo 与 go-cqhttp 分离运行?
+  echo 请注意手动同步版本协议文件至go-cqhttp的协议信息目录。
+  echo 然后输入 Qsign API 地址和 KEY 到对应的客户端中。
 )  
   findstr /C:"uin: 1233456" "%config_file%" 2>nul >nul
   if %errorlevel% equ 0 (
-      set /p "account=Account uin: "
-      set /p "password=Password: "
+      set /p "account=帐号: "
+      set /p "password=密码: "
       echo -------------------------------------------------------------------------------------------------
-      echo Your uin:!account! password:!password!
+      echo 你的帐号:!account! 密码:!password!
       lib\sed.exe -i "s/uin: 1233456/uin: !account!/g; s/password: ''/password: '!password!'/g; s/auto-refresh-token: false/auto-refresh-token: true/g" "%config_file%"
-      echo Account and password saved!
+      echo 帐号和密码信息已保存!
   ) else (
       echo -------------------------------------------------------------------------------------------------
-      echo The [config.yml] already contains account information or not exist.
-      echo Skip account settings.
+      echo 文件 [config.yml] 中已包含帐户信息或者该文件不存在！
+      echo 跳过帐户信息设置。
   )
 
 echo -------------------------------------------------------------------------------------------------
-echo Qsign API:http://!host!:!port!
-echo KEY=!key!
-echo Qsign_version:%ver%
-echo TXlib_version:%txlib_version% 
+echo Qsign API 地址:http://!host!:!port!
+echo 密钥 KEY=!key!
+echo Qsign-Onekey版本:%ver%
+echo TXlib版本:%txlib_version% 
 echo -------------------------------------------------------------------------------------------------
 timeout /t 3 > nul
 
 where curl >nul 2>nul
-echo Check if the curl command is installed in the environment variables...
+echo 检查系统中是否已安装Curl...
 if %errorlevel% equ 0 (
-  echo The curl command is detected, use the installed curl
+  echo 检测到curl命令，将使用系统变量的curl继续运行。
   set "curl_command=curl"
 ) else (
-  echo The curl command is not detected, use the "curl.exe" from the lib folder.This precompiled executable works only on x86 architecture systems.
+  echo 未检测到curl命令，将使用一键包自带的 "curl.exe" 继续运行。此编译仅供x86_64系统使用。
   set "curl_command=lib\curl.exe"
 )
 
@@ -156,19 +157,19 @@ if "!host!"=="0.0.0.0" (
       )
 %curl_command% -I http://!core_host!:!port!/register?uin=12345678 --connect-timeout 5 -m 5 >nul 2>nul
 if %errorlevel% equ 0 (
-    echo Qsign API is running.
+    echo Qsign API 存活！
     timeout /t 30 /nobreak >nul
     goto loop
 ) else (
-    echo Qsign API is not running, Restarting...
+    echo Qsign API 探活失败，正在结束进程并重新启动...
     if defined pid (
       tasklist /fi "PID eq !pid!" | findstr /i "!pid!" >nul
         if %errorlevel% equ 0 (
           taskkill /F /PID !pid!))
-    start "Qsign-Onekey Core" cmd /c "bin\unidbg-fetch-qsign --basePath=%library%%txlib_version%"
+    start "Qsign-Onekey 核心进程" cmd /c "bin\unidbg-fetch-qsign --basePath=%library%%txlib_version%"
     timeout /t 15 /nobreak >nul
     for /f "tokens=5" %%A in ('netstat -ano ^| findstr ":!port!.*LISTENING"') do (
       set "pid=%%A")
-    echo Qsign API running on processes with PID:!pid!.
+    echo Qsign API 运行中 PID:!pid!
     goto loop
 )
