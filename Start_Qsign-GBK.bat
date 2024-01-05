@@ -29,7 +29,7 @@ if not exist "txlib_version.json" (
   echo -------------------------------------------------------------------------------------------------
   echo unidbg-fetch-qsign-onekey Ver.%ver% by %author%
   echo [txlib_version.json] 版本信息文件未找到。
-  echo 请输入要保存的选项,按Enter键确认。
+  echo 请输入要设定的选项,按Enter键确认。
   echo 如果你直接按下Enter键，将会保存提示的默认参数。
   echo -------------------------------------------------------------------------------------------------
   set /p "txlib_version=txlib版本(默认:8.9.88): "
