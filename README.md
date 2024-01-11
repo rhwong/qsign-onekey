@@ -69,5 +69,6 @@
 
 ## Stargazers over time
 
-[![Stargazers over time](https://starchart.cc/rhwong/unidbg-fetch-qsign-onekey.svg)](https://starchart.cc/rhwong/unidbg-fetch-qsign-onekey)
+[![Stargazers over time](https://starchart.cc/rhwong/qsign-onekey.svg?variant=adaptive)](https://starchart.cc/rhwong/qsign-onekey)
+
 
