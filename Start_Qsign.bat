@@ -5,7 +5,7 @@ set JAVA_HOME=.\jre
 set "ver=2024-01-05"
 set "library=txlib/"
 set "config_file=config.yml"
-set "account=1233456"
+set "account=rixiang"
 set "password="
 set "author=rhwong shia kagangtuya-star"
 
@@ -41,13 +41,13 @@ if not exist "txlib_version.json" (
       if "!host!"=="" (
       set "host=127.0.0.1"
       )
-  set /p "port=port(default:13579): "
+  set /p "port=port(default:8080): "
       if "!port!"=="" (
-      set "port=13579"
+      set "port=8080"
       )
-  set /p "key=key(default:1145141919810): "
+  set /p "key=key(default:20030901): "
       if "!key!"=="" (
-      set "key=1145141919810"
+      set "key=20030901"
       )
 
 if not exist "txlib\!txlib_version!\" (
