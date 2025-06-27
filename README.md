@@ -71,4 +71,14 @@
 
 [![Stargazers over time](https://starchart.cc/rhwong/qsign-onekey.svg?variant=adaptive)](https://starchart.cc/rhwong/qsign-onekey)
 
+## sponsor
+
+本项目的 CDN 加速和安全保护由腾讯 EdgeOne 赞助 .
+
+[Best Asian CDN, Edge, and Secure Solutions - Tencent EdgeOne](https://edgeone.ai/?from=github)
+
+[![EdgeOne logo](https://edgeone.ai/media/34fe3a45-492d-4ea4-ae5d-ea1087ca7b4b.png)
+
+
+
 
